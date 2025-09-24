@@ -1,0 +1,84 @@
+<script context="module" lang="ts">
+  // filepath: serviceCard.svelte
+  export interface ServiceCardProps {
+    icon?: string;
+    color?: string;
+    title: string;
+    desc: string;
+    features?: string[];
+    price?: string;
+    buttonText?: string;
+  }
+</script>
+
+<script lang="ts">
+  import { Button } from "carbon-components-svelte";
+
+  // Predefined color palette
+  const palette = [
+    "#2563eb", // blue-600
+    "#16a34a", // green-600
+    "#dc2626", // red-600
+    "#9333ea", // purple-600
+    "#f59e0b", // amber-500
+    "#0891b2", // cyan-600
+  ];
+
+  export let data: ServiceCardProps;
+
+  // Auto-fallbacks
+  const color =
+    data.color || palette[Math.floor(Math.random() * palette.length)];
+  const buttonText = data.buttonText ?? "Learn more";
+</script>
+
+<div
+  class="px-[34px] py-[46px] m-3.5 flex flex-col gap-[24px] outline shadow min-h-[480px] flex-1 w-full max-w-[380px]"
+  style={`outline-color: ${color};`}
+>
+  <!-- Header -->
+  <div class="flex gap-3 items-center">
+    {#if data.icon}
+      <div
+        class="p-2 size-[54px] flex items-center justify-center"
+        style={`background-color: ${color};`}
+      >
+        <img
+          src={data.icon}
+          alt={data.title}
+          class="max-h-full max-w-full object-contain"
+        />
+      </div>
+    {/if}
+    <div>
+      <h2 class="font-semibold text-lg">{data.title}</h2>
+      <p class="text-gray-600 text-sm">{data.desc}</p>
+    </div>
+  </div>
+
+  <!-- Features -->
+  {#if data.features?.length}
+    <ul class="list-disc text-[15px] flex flex-col gap-[10px] pl-6 flex-grow">
+      {#each data.features as feature}
+        <li>{feature}</li>
+      {/each}
+    </ul>
+  {/if}
+
+  <!-- Price -->
+  {#if data.price}
+    <h2 class="font-bold text-xl mt-auto" style={`color: ${color};`}>
+      {data.price}
+    </h2>
+  {/if}
+
+  <!-- CTA Button -->
+  <div>
+    <Button
+      class="!w-full !flex !items-center !justify-center !text-[16px] font-medium"
+      style={`background-color: ${color};`}
+    >
+      {buttonText}
+    </Button>
+  </div>
+</div>

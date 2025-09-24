@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    font-family: IBM Plex Sans;
+    padding-bottom: 300px;
+    
+}
+p {
+font-family: IBM Plex Sans;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+
+line-height: 25.5px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+ 
