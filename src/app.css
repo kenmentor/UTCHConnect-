@@ -1,9 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+  --color-primary: #0050e6;
+  --color-secondary: #ff5722;
+}
+
+/* Utility helpers */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+
 body{
     font-family: IBM Plex Sans;
     padding-bottom: 300px;
+
     
 }
 p {
@@ -17,4 +40,8 @@ letter-spacing: 0%;
 text-align: center;
 
 }
- 
+ .btn {
+    padding: 15px 30px;
+    background: #0050e6;
+    color: white;
+  }

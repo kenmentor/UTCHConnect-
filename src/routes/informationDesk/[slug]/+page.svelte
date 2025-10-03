@@ -3,28 +3,54 @@
   import Header from "$lib/components/Header.svelte";
   import InformationDesk from "$lib/components/informationDesk.svelte";
   import PageLocator from "$lib/components/pageLocator.svelte";
-  import { Tile } from "carbon-components-svelte";
   import info from "$lib/assets/info.png";
+
+  $: data = {
+    date: " September 08, 2025",
+    type: " System Update",
+    by: " By UCTH Administration",
+    title: " New Electronic Health Records System Launch",
+    image: info,
+  };
 </script>
 
 <Header />
-<main class=" p-3 pt-24">
-  <div class="px-[160px] flex flex-col gap-[20px]">
+<main class="p-3 pt-24">
+  <!-- Responsive container padding -->
+  <div class="px-4 sm:px-10 lg:px-[160px] flex flex-col gap-[20px]">
     <PageLocator />
-    <div class="flex items-center gap-[29px]">
-      <span class="px-5 py-2 text-white bg-blue-600"> September 08, 2025 </span>
-      <span class="bg-[#D9D9D9] px-5 py-2"> Systerm Update</span>
-      <span class="px-5 py-2"> By UTCH Administration </span>
+
+    <!-- Info tags -->
+    <div class="flex flex-wrap gap-3">
+      <span
+        class="px-5 py-[15px] text-white bg-blue-600 text-[20px] font-semibold"
+      >
+        {data.date}
+      </span>
+      <span class="bg-[#D9D9D9] px-5 py-[15px] text-[20px] font-semibold">
+        {data.type}
+      </span>
+      <span class="px-5 py-[15px] text-[20px] font-semibold">
+        {data.by}
+      </span>
     </div>
-    <div class=" flex flex-col items-start gap-[20px]">
-      <h1 class="text-[58px]">New Electronic Health Records System Launch</h1>
+
+    <!-- Content -->
+    <div class="flex flex-col items-start gap-[20px]">
+      <h1 class="font-semibold">
+        {data.title}
+      </h1>
       <p>
         UCTH has successfully implemented a comprehensive electronic health
         records system to improve patient care coordination and reduce waiting
         times across all departments.
       </p>
 
-      <img src={info} class="w-full h-[609px] aspect-video object-cover" />
+      <!-- Responsive image height -->
+      <img
+        src={info}
+        class="w-full h-auto max-h-[400px] sm:max-h-[500px] lg:max-h-[609px] aspect-video object-cover"
+      />
 
       <p>
         The University of Calabar Teaching Hospital (UCTH) is proud to announce
@@ -34,42 +60,41 @@
         services to our patients while streamlining operations for our medical
         staff.
       </p>
+
       <div>
         <h3>Key Features of the New System</h3>
         <p>
           The new EHR system brings numerous improvements to patient care and
           hospital efficiency:
         </p>
-
         <p>
-          <span class="bold"> Integrated Patient Records: </span>
-           Complete medical histories, test results, and treatment plans are now
-          accessible from any department.
-        </p>
-
-        <p>
-          <span class="bold">Reduced Wait Times:</span>
-           Complete medical histories, test results, and treatment plans are now
-          accessible from any department.
+          <span class="bold">Integrated Patient Records:</span> Complete medical
+          histories, test results, and treatment plans are now accessible from any
+          department.
         </p>
         <p>
-          <span class="bold"> Enhanced Safety: </span>
-          Built-in alerts for drug interactions, allergies, and critical values..
+          <span class="bold">Reduced Wait Times:</span> Faster access across all
+          hospital units.
         </p>
         <p>
-          <span class="bold"> Better Coordination: </span>
-           Seamless communication between doctors, nurses, and specialists.
+          <span class="bold">Enhanced Safety:</span> Built-in alerts for drug interactions,
+          allergies, and critical values.
         </p>
         <p>
-          <span class="bold"> Digital Prescriptions: </span>
-           Electronic prescribing reduces errors and improves pharmacy efficiency.
+          <span class="bold">Better Coordination:</span> Seamless communication between
+          doctors, nurses, and specialists.
+        </p>
+        <p>
+          <span class="bold">Digital Prescriptions:</span> Electronic prescribing
+          reduces errors and improves pharmacy efficiency.
         </p>
       </div>
-      <div class="flex bg-gray-50 rounded-md shadow-sm">
-        <!-- Blue strip -->
-        <div class="w-1 bg-blue-600 rounded-l-md"></div>
 
-        <!-- Content -->
+      <!-- Highlighted box -->
+      <div class="flex flex-col sm:flex-row bg-gray-50 rounded-md shadow-sm">
+        <div
+          class="w-full sm:w-1 bg-blue-600 rounded-t-md sm:rounded-l-md sm:rounded-t-none"
+        ></div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-gray-800 mb-2">
             Important for Patients
@@ -90,22 +115,23 @@
         minimal disruption to patient services:
       </p>
       <p>
-        <span class="bold"> Phase 1 (July):</span>
-        : Administrative departments and outpatient clinics.
+        <span class="bold">Phase 1 (July):</span> Administrative departments and
+        outpatient clinics.
       </p>
       <p>
-        <span class="bold"> Phase 2 (August):</span>
-         Emergency department and diagnostic services
+        <span class="bold">Phase 2 (August):</span> Emergency department and diagnostic
+        services
       </p>
       <p>
-        <span class="bold">Phase 3 (September):</span>
-         Inpatient wards and surgical departments.
+        <span class="bold">Phase 3 (September):</span> Inpatient wards and surgical
+        departments.
       </p>
       <p>
         All departments are now fully operational on the new system, with
         ongoing support and additional training sessions scheduled throughout
         the coming months.
       </p>
+
       <h3>Benefits for Healthcare Providers</h3>
       <p>
         Medical staff have reported significant improvements in their daily
@@ -120,6 +146,7 @@
         from bedside tablets, reducing paperwork and increasing time spent on
         direct patient care.
       </p>
+
       <h3>Looking Forward</h3>
       <p>
         Medical staff have reported significant improvements in their daily
@@ -128,6 +155,7 @@
         access to complete patient histories and test results has dramatically
         improved our diagnostic capabilities."
       </p>
+
       <div>
         <h1>Related Articles</h1>
         <InformationDesk title="Related Articles" />
@@ -140,11 +168,12 @@
 <style>
   p {
     font-weight: 400;
-
     font-size: 25px;
-
     line-height: 36px;
     letter-spacing: 0%;
+  }
+  h1 {
+    font-size: 58px;
   }
   p,
   h1 {
@@ -153,19 +182,31 @@
   h3 {
     font-family: IBM Plex Sans;
     font-weight: 500;
-    font-style: Medium;
     font-size: 30px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
   }
   .bold {
     font-family: IBM Plex Sans;
     font-weight: 500;
-    font-style: Medium;
     font-size: 30px;
-    leading-trim: NONE;
     line-height: 42px;
     letter-spacing: 0%;
+  }
+
+  /* ✅ Reduce font size only on mobile */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    h3,
+    .bold {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
 </style>

@@ -5,8 +5,17 @@
   import not from "$lib/assets/avater.png";
 
   export let authorized: boolean = false;
+  export let pageId: number = 1;
 
   let mobileMenuOpen: boolean = false;
+
+  // Navigation links
+  let navigation = [
+    { link: "/", name: "Home", id: 1 },
+    { link: "staffID/slug/Overview", name: "Service", id: 2 },
+    { link: "about-us", name: "About Us", id: 3 },
+    { link: "informationDesk", name: "Info Desk", id: 4 },
+  ];
 </script>
 
 <header
@@ -20,24 +29,34 @@
     <div>
       <img src={YOUreka} alt="" class="h-[40px] sm:h-[50px] lg:h-[70px]" />
     </div>
-    <div class="hidden xs:flex items-center">
-      YOUreka <span class="text-blue-700">&nbsp;IDID Service</span>
+    <div class=" xs:flex items-center text-[16px] font-medium">
+      YOUreka <span style="color: var(--color-primary);"
+        >&nbsp;IDID Service</span
+      >
     </div>
   </div>
 
   <!-- Desktop Navigation -->
   <ul class="hidden md:flex gap-6 lg:gap-10 text-[14px] sm:text-[16px]">
-    <li class="text-blue-700"><a href="/">Home</a></li>
-    <li><a href="/staffID/slug/Overview">Services</a></li>
-    <li><a href="/about-us">About Us</a></li>
-    <li><a href="/informationDesk">Info Desk</a></li>
+    {#each navigation as item}
+      <li class="text-red-700 font-medium text-[16px]">
+        <a
+          href={item.link}
+          class={pageId === item.id
+            ? "text-[var(--color-primary)]"
+            : "text-[#333333]"}
+        >
+          {item.name}
+        </a>
+      </li>
+    {/each}
   </ul>
 
   <!-- Auth Section (Desktop only) -->
   <div class="hidden md:flex gap-2 sm:gap-3">
     {#if !authorized}
-      <Button href="/login">Login</Button>
-      <Button href="/signup">Sign Up</Button>
+      <a href="/login" class="signup btn font-medium">Login</a>
+      <a class="btn" href="/signup">Sign Up</a>
     {:else}
       <div class="flex items-center gap-2 sm:gap-4 px-2">
         <img
@@ -46,7 +65,7 @@
           class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
         />
         <div
-          class="flex items-center gap-2 sm:gap-4 bg-[#0050E60F] p-2 rounded-md outline outline-[#0050E6]"
+          class="flex items-center gap-2 sm:gap-4 bg-[#0050E60F] p-2 rounded-md outline outline-[var(--color-primary)]"
         >
           <img
             src={not}
@@ -94,17 +113,32 @@
       </button>
     </div>
 
+    <!-- Mobile Navigation (reuses same array as desktop) -->
     <nav class="flex flex-col gap-4 text-[16px]">
-      <a href="/" class="text-blue-700">Home</a>
-      <a href="/staffID/slug/Overview">Services</a>
-      <a href="/about-us">About Us</a>
-      <a href="/informationDesk">Info Desk</a>
+      {#each navigation as item}
+        <a
+          href={item.link}
+          class={pageId === item.id
+            ? "text-[var(--color-primary)] font-medium"
+            : "text-[#333333]"}
+          on:click={() => (mobileMenuOpen = false)}
+        >
+          {item.name}
+        </a>
+      {/each}
     </nav>
 
     <!-- Auth Section (Mobile) -->
     <div class="mt-auto">
       {#if !authorized}
-        <Button href="/login" class="w-full">Login</Button>
+        <Button
+          href="/login"
+          class="w-full !flex !justify-center !bg-[var(--color-primary)]"
+          >Login</Button
+        >
+        <Button href="/signup" class="w-full !flex !justify-center mt-2 "
+          >Sign Up</Button
+        >
       {:else}
         <div class="flex items-center gap-3">
           <img src={not} alt="" class="w-10 h-10 rounded-full object-cover" />
@@ -129,5 +163,10 @@
   }
   .animate-slideIn {
     animation: slideIn 0.3s ease-out forwards;
+  }
+
+  .signup {
+    background: transparent;
+    color: black;
   }
 </style>

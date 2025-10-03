@@ -60,7 +60,7 @@
   export let children: any;
 </script>
 
-<Header authorized={true} />
+<Header authorized={true} pageId={2} />
 
 <main class="pt-24 fixed w-full h-full bg-gray-50">
   <!-- Breadcrumb -->
@@ -71,7 +71,7 @@
 
   <!-- Page title bar -->
   <div
-    class="bg-[#0050E6] text-[24px] md:text-[36px] p-[16px] md:p-[20px] text-white
+    class="bg-[var(--color-primary)] text-[24px] md:text-[36px] p-[16px] md:p-[20px] text-white
            pl-0 md:pl-[332px]"
   >
     Services

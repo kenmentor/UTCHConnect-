@@ -27,7 +27,7 @@
 <!-- Sidebar -->
 <div
   class={`absolute top-0 bottom-0 left-0 bg-[#0050E614] flex flex-col
-         w-[80px] md:w-[350px] transition-all duration-300 ${classStyle}`}
+         w-[80px] md:w-[380px] transition-all duration-300 ${classStyle}`}
 >
   <nav class="flex-1 pt-6">
     <ul class="flex flex-col items-center md:items-start w-full">
@@ -35,7 +35,7 @@
         <li class="w-full mb-4">
           <a
             href={`${item.link}`}
-            class="py-3 px-2 md:px-[70px] hover:bg-white w-full flex justify-center md:justify-start rounded-lg transition"
+            class="py-3 px-2 md:px-[70px] hover:bg-white w-full flex justify-center md:justify-start transition"
           >
             <div
               class="flex items-center gap-0 md:gap-2 text-[12px] md:text-[22px] text-black"
@@ -61,7 +61,9 @@
                   />
                 {/if}
               {/if}
-              <span class="hidden md:inline">{item.name}</span>
+              <span class="hidden md:inline text-[22px] font-medium"
+                >{item.name}</span
+              >
             </div>
           </a>
         </li>
@@ -70,11 +72,11 @@
 
     <!-- Footer (logo + brand) -->
     <div
-      class="p-4 border-t border-gray-300 flex flex-col md:flex-row items-center md:items-center gap-2"
+      class="pl-4 border-t border-gray-300 flex flex-col md:flex-row items-center md:items-center gap-2"
     >
       <img src={logo} alt="logo" class="md:w-[40px] h-full object-cover" />
       <h2 class="hidden md:block text-black text-[22px]">
-        <span class="text-blue-600">UCTH</span> IDID
+        <span class="text-[var(--color-primary)]">UCTH</span> IDID
       </h2>
     </div>
   </nav>

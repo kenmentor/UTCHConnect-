@@ -187,8 +187,11 @@
 
   <!-- Save -->
   <div class="flex justify-end border-t border-gray-200 pt-6">
-    <Button size="lg" kind="primary" on:click={saveSettings}
-      >Save All Changes</Button
+    <Button
+      size="lg"
+      kind="primary"
+      class="!bg-[var(--color-primary)]"
+      on:click={saveSettings}>Save All Changes</Button
     >
   </div>
 

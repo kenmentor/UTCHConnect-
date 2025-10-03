@@ -13,7 +13,7 @@
   >
     <!-- Left Content -->
     <div class="flex flex-col gap-6 p-6 lg:p-10 flex-1">
-      <div>
+      <div class=" ">
         <img
           src={minicutlin}
           alt="Link Icon"
@@ -30,7 +30,11 @@
       </div>
 
       <div>
-        <Button icon={ArrowRight} size="lg">Get Started</Button>
+        <button
+          class="btn flex gap-[10px]"
+          style="background-color: var(--color-primary);"
+          >Get Started <ArrowRight />
+        </button>
       </div>
     </div>
 

@@ -6,6 +6,7 @@
 
   import logo from "$lib/assets/logo.png";
   import backgroundimage from "$lib/assets/backgroundimage.jpg";
+  import { ArrowDownRight, ArrowRight } from "carbon-icons-svelte";
 </script>
 
 <section
@@ -29,15 +30,14 @@
       {subtitle}
     </p>
     <div>
-      <Button
-        class="block mx-auto lg:mx-0"
+      <button
+        class=" btn mx-auto lg:mx-0 !px-[25px] flex gap-[10px] text-white py-[11px] text-[16px]"
         href="/"
         color="red"
-        type="secondary"
         icon={Breadcrumb}
       >
-        Get Started
-      </Button>
+        Get Started <ArrowRight />
+      </button>
     </div>
   </div>
 
@@ -52,3 +52,11 @@
     />
   </div>
 </section>
+
+<style>
+  .btn {
+    padding: 15px 30px;
+    background: var(--color-primary);
+    color: white;
+  }
+</style>

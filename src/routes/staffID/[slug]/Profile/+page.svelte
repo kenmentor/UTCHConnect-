@@ -46,7 +46,7 @@
       {#if isEditing}
         <label
           for="avatar-upload"
-          class="absolute bottom-0 right-0 bg-blue-600 p-2 rounded-full cursor-pointer hover:bg-blue-700 transition"
+          class="absolute bottom-0 right-0 bg-[var(--color-primary)] p-2 rounded-full cursor-pointer hover:bg-[var(--color-primary)] transition"
         >
           <span class="text-white text-xs font-bold">📷</span>
         </label>
@@ -64,11 +64,19 @@
       <h1 class="text-2xl font-semibold">{profile.name}</h1>
       <p class="text-gray-600">{profile.role} – {profile.department}</p>
       <div class="flex gap-3 mt-3">
-        <Button kind="tertiary" on:click={toggleEdit}>
+        <Button
+          kind="tertiary"
+          on:click={toggleEdit}
+          class="!text-[var(--color-primary)] !outline-[var(--color-primary)] "
+        >
           {isEditing ? "Cancel" : "Edit Profile"}
         </Button>
         {#if isEditing}
-          <Button kind="primary" on:click={saveProfile}>Save</Button>
+          <Button
+            kind="primary"
+            on:click={saveProfile}
+            class="!bg-[var(--color-primary)]">Save</Button
+          >
         {/if}
       </div>
     </div>

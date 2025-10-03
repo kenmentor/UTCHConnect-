@@ -103,9 +103,10 @@
       items={severities}
       bind:selectedItem={severityFilter}
     />
-    <Button
-      kind="primary"
-      on:click={() => console.log("Refresh Security Events")}>Refresh</Button
+    <button
+      class="btn"
+      style="background-color: var(--color-primary);"
+      on:click={() => console.log("Refresh Security Events")}>Refresh</button
     >
   </div>
 
@@ -143,6 +144,7 @@
               <TableCell class="space-x-2">
                 <Button
                   kind="secondary"
+                  style="--cds-button-secondary: var(--color-primary);"
                   on:click={() => alert(`View details for ${e.event}`)}
                   >View</Button
                 >

@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"IBM Plex Sans"', "ui-sans-serif", "system-ui"],
+        plex: ['"IBM Plex Sans"', "sans-serif"],
+        plexCondensed: ['"IBM Plex Sans Condensed"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

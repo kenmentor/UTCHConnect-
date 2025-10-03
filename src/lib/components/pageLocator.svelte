@@ -19,7 +19,10 @@
   <ol class="flex flex-wrap items-center gap-2 text-[16px] md:text-[18px]">
     <!-- Home link -->
     <li class="flex items-center gap-1">
-      <a href="/" class="flex items-center gap-1 text-blue-600 hover:underline">
+      <a
+        href="/"
+        class="flex items-center gap-1 text-[var(--color-primary)] hover:underline"
+      >
         <Home class="size-[20px] md:size-[24px]" aria-hidden="true" />
         <span>Home</span>
       </a>
@@ -36,7 +39,7 @@
         {#if i < segments.length - 1}
           <a
             href={buildPath(i)}
-            class="text-blue-600 hover:underline capitalize"
+            class="text-[var(--color-primary)] hover:underline capitalize"
           >
             {segment.replace(/-/g, " ")}
           </a>

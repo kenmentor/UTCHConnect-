@@ -6,37 +6,42 @@
     Toggle,
     FileUploader,
   } from "carbon-components-svelte";
+  import { theme } from "$lib/stores/theme";
 
-  // Correct typing for settings
+  // Settings state
   let settings: {
     appName: string;
     supportEmail: string;
     timezone: string;
-    theme: string;
     enable2FA: boolean;
     enableNotifications: boolean;
-    logo: File | null; // <-- fix here
+    logo: File | null;
+    primary: string;
+    secondary: string;
   } = {
     appName: "My Awesome App",
     supportEmail: "support@company.com",
     timezone: "UTC",
-    theme: "Light",
     enable2FA: true,
     enableNotifications: true,
     logo: null,
+    primary: "#0050E6", // default
+    secondary: "#FF5722", // default
   };
 
   let timezones = ["UTC", "GMT", "PST", "EST", "CET"];
-  let themes = ["Light", "Dark"];
 
   function handleLogoUpload(event: Event) {
     const file = (event.target as HTMLInputElement).files?.[0];
-    if (file) settings.logo = file; // ✅ now allowed
+    if (file) settings.logo = file;
   }
 
   function saveSettings() {
-    console.log("Saved Settings:", settings);
-    alert("Settings saved successfully!");
+    theme.set({
+      primary: settings.primary,
+      secondary: settings.secondary,
+    });
+    alert("Theme and settings saved successfully!");
   }
 
   function resetSettings() {
@@ -44,11 +49,16 @@
       appName: "",
       supportEmail: "",
       timezone: "UTC",
-      theme: "Light",
       enable2FA: false,
       enableNotifications: false,
       logo: null,
+      primary: "#0050E6",
+      secondary: "#FF5722",
     };
+    theme.set({
+      primary: settings.primary,
+      secondary: settings.secondary,
+    });
   }
 </script>
 
@@ -76,12 +86,17 @@
         items={timezones}
         bind:selectedItem={settings.timezone}
       />
-      <Dropdown
-        id="theme"
-        label="Theme"
-        placeholder="Select Theme"
-        items={themes}
-        bind:selectedItem={settings.theme}
+
+      <!-- Theme Colors -->
+      <TextInput
+        labelText="Primary Color"
+        type="color"
+        bind:value={settings.primary}
+      />
+      <TextInput
+        labelText="Secondary Color"
+        type="color"
+        bind:value={settings.secondary}
       />
     </div>
   </div>

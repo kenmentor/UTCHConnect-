@@ -1,5 +1,6 @@
 <script>
   import { Button } from "carbon-components-svelte";
+  import Pie from "./Pie.svelte";
   export let title;
   export let desc;
   export let image;
@@ -29,20 +30,19 @@
   <div>
     <div>
       <div class="flex">
-        <div style="background: {color};" class="p-2 rounded-sm">
-          <img src={image} alt="" class="h-[30px]" />
+        <div style="background: {color};" class="p-3 rounded-full">
+          <img src={image} alt="" class="h-[30px] w-[30px]" />
         </div>
       </div>
-
-      <div>{percent}</div>
     </div>
     <div>
-      <h2>
+      <h2 class="font-medium">
         {title}
       </h2>
-      <p class="text-left">
+      <p class="text-left text-[14px]">
         {desc}
       </p>
     </div>
   </div>
+  <Pie size={40} stroke={5} {color} percentage={percent} />
 </div>

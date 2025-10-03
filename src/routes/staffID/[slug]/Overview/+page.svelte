@@ -16,33 +16,51 @@
   const data = [
     {
       icon: doctor,
-      title: " New Policy Updates.",
-      description:
-        "Important policy changes from the Chief Medical Director's office regarding...",
+      title: " Staff ID Card",
+      description: "Generate and manage staff identity cards",
       link: "/",
-      percent: 23,
+      percent: 25,
+      extra: "5 Request ",
     },
     {
       icon: cash,
-      title: "New Task Assigned",
-      description:
-        "You have been assigned to handle a new department audit task.",
+      title: "PayiQu",
+      description: "Payment processing and financial hub",
       link: "/tasks",
-      percent: 45,
+      percent: 25,
+      extra: "$ 40,000 ",
     },
     {
       icon: doctor,
-      title: "Payment Processed",
-      description: "A payment was successfully processed for ward supplies.",
+      title: "Messenger",
+      description: "Internal communication and chat",
       link: "/payments",
       percent: 60,
+      extra: "12  Chats",
     },
     {
       icon: doctor,
-      title: "Task Completed",
-      description: "Your request for system upgrade has been completed.",
+      title: "Biometric Clock",
+      description: "YClock in/out and attendance tracking",
       link: "/completed",
-      percent: 100,
+      percent: 1,
+      extra: "40 Hours",
+    },
+    {
+      icon: doctor,
+      title: "iSchedular",
+      description: "View schedules and manage time off",
+      link: "/completed",
+      percent: 50,
+      extra: "5 Shifts",
+    },
+    {
+      icon: doctor,
+      title: "YOUreka",
+      description: "Service integration and connectivity",
+      link: "/completed",
+      percent: 10,
+      extra: "5 Connected",
     },
   ];
 
@@ -74,7 +92,7 @@
     <div class="flex flex-col overflow-y-scroll flex-1 pb-[300px]">
       <div class="px-[30px] flex flex-col gap-2">
         <h1>My Services</h1>
-        <a href=""> View All</a>
+        <a href="" class="text-[var(--color-primary)]"> View All</a>
       </div>
       <Grid>
         <Row>
@@ -118,13 +136,13 @@
         <h2>Quick Stats</h2>
         <div class="flex justify-between gap-4">
           <div class="flex flex-col items-center bg-white p-4 rounded-md w-1/2">
-            <DocumentTasks class="w-6 h-6 text-blue-600 mb-1" />
-            <h2 class="text-blue-600">5</h2>
+            <DocumentTasks class="w-6 h-6 text-[var(--color-primary)] mb-1" />
+            <h2 class="text-[var(--color-primary)]">5</h2>
             <p class="!text-[16px]">Pending Tasks</p>
           </div>
           <div class="flex flex-col items-center bg-white p-4 rounded-md w-1/2">
             <Checkmark class="w-6 h-6 text-green-600 mb-1" />
-            <h2 class="text-blue-600">12</h2>
+            <h2 class="text-[var(--color-primary)]">12</h2>
             <p class="!text-[16px]">Completed Today</p>
           </div>
         </div>

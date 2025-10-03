@@ -2,7 +2,9 @@
   import info from "$lib/assets/info.png";
   import Information from "./Information.svelte";
 
-  export let title: string = "Information Desk";
+  export let title: string = "Latest News & Updates";
+  export let desc: string =
+    "Stay informed with the latest developments, policy changes, and important announcements from UCTH";
 
   const data = [
     {
@@ -39,9 +41,17 @@
 <section
   class="min-h-screen flex flex-col items-center justify-center bg-zinc-50 py-16"
 >
-  <h2 class="text-2xl sm:text-3xl font-bold mb-10 text-center">
+  <h1
+    class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] mb-6 text-center font-semibold"
+  >
     {title}
-  </h2>
+  </h1>
+
+  <p
+    class="font-medium text-base sm:text-lg md:text-xl mb-10 text-[#00000099] w-full sm:w-4/5 md:w-3/5 lg:w-1/2 text-center"
+  >
+    {desc}
+  </p>
 
   <!-- Responsive grid: 1 col on small, 2 cols on medium, 3 cols on lg+ -->
   <div

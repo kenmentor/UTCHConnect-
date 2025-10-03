@@ -65,12 +65,10 @@
   ];
 </script>
 
-<!-- Responsive grid: 1 column on mobile, 2 on desktop -->
-<div
-  class="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 w-full min-h-screen"
->
+<!-- Wrapper for content beside sidebar -->
+<div class="flex flex-col lg:flex-row w-full min-h-screen lg:pl-[300px]">
   <!-- Main Content -->
-  <div class="flex flex-col px-6 py-8 gap-8 overflow-y-auto h-full">
+  <div class="flex-1 flex flex-col px-6 py-8 gap-8 overflow-y-auto">
     <!-- Metrics -->
     <div>
       <h2 class="mb-3">Monitor system health and key metrics</h2>
@@ -132,8 +130,8 @@
     </div>
   </div>
 
-  <!-- Side Cards (only show on right) -->
-  <aside class="flex flex-col gap-6 p-6 border-l bg-white">
+  <!-- Side Cards -->
+  <aside class="flex flex-col gap-6 p-6 border-l w-full lg:w-[400px] bg-white">
     {#each sideCards as card}
       <div class="items-center bg-[#F9F9F9] p-5 flex flex-col gap-2 shadow-md">
         <h2 class="text-lg font-semibold">{card.title}</h2>

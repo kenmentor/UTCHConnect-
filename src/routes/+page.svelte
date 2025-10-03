@@ -24,8 +24,9 @@
   class="cds-custom-theme relative flex min-h-screen flex-col gap-10 px-4 sm:px-8 lg:px-16 xl:px-32"
 >
   <Cta />
-  <ServiceCenter />
   <InformationDesk />
+  <ServiceCenter />
+
   <ConnectWithYu />
 </main>
 

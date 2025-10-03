@@ -1,5 +1,5 @@
 <footer
-  class="w-full bg-blue-700 px-4 sm:px-8 md:px-[35px] py-4 text-white text-[14px]
+  class="w-full bg-[var(--color-primary)] px-4 sm:px-8 md:px-[35px] py-4 text-white text-[14px]
          flex flex-col md:flex-row items-center justify-between gap-4"
 >
   <!-- Links -->
