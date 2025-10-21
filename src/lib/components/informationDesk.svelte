@@ -1,41 +1,18 @@
 <script lang="ts">
+  type Data = {
+    img: string;
+    title: string;
+    description: string;
+    id: string;
+  };
+
   import info from "$lib/assets/info.png";
   import Information from "./Information.svelte";
-
+  export let isReadmore = false;
   export let title: string = "Latest News & Updates";
-  export let desc: string =
-    "Stay informed with the latest developments, policy changes, and important announcements from UCTH";
+  export let desc: string = "";
 
-  const data = [
-    {
-      img: info,
-      title: "CMD Office: New Policy Updates.",
-      description:
-        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
-      id: "1",
-    },
-    {
-      img: info,
-      title: "CMD Office: New Policy Updates.",
-      description:
-        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
-      id: "2",
-    },
-    {
-      img: info,
-      title: "CMD Office: New Policy Updates.",
-      description:
-        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
-      id: "3",
-    },
-    {
-      img: info,
-      title: "CMD Office: New Policy Updates.",
-      description:
-        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
-      id: "4",
-    },
-  ];
+  export let data: Data[];
 </script>
 
 <section
@@ -66,4 +43,13 @@
       />
     {/each}
   </div>
+
+  {#if isReadmore}
+    <div class="py-12 px-10 flex w-full justify-end">
+      <a
+        href="/informationDesk"
+        class="font-bold text-gray-600 text-[16px] underline">Read more</a
+      >
+    </div>
+  {/if}
 </section>

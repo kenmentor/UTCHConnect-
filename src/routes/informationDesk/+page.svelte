@@ -9,7 +9,74 @@
   import Cta from "$lib/components/CTA.svelte";
   import ServiceCenter from "$lib/components/ServiceCenter.svelte";
   import { Button } from "carbon-components-svelte";
+  import info from "$lib/assets/info.png";
   import { Heading } from "carbon-icons-svelte";
+
+  const data = [
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "1",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "2",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "3",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+  ];
 </script>
 
 <Header pageId={4} />
@@ -29,7 +96,7 @@
   class="cds-custom-theme relative flex min-h-screen flex-col gap-3.5
          px-4 sm:px-8 md:px-12 lg:px-20 xl:px-[140px] pb-12 pt-12"
 >
-  <InformationDesk />
+  <InformationDesk {data} />
 
   <section
     class="flex items-center justify-center mb-16 sm:mb-24 md:mb-[162px]

@@ -12,6 +12,36 @@
     title: " New Electronic Health Records System Launch",
     image: info,
   };
+  const mockRelatedArticle = [
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "4",
+    },
+  ];
 </script>
 
 <Header />
@@ -157,8 +187,7 @@
       </p>
 
       <div>
-        <h1>Related Articles</h1>
-        <InformationDesk title="Related Articles" />
+        <InformationDesk title="Related Articles" data={mockRelatedArticle} />
       </div>
     </div>
   </div>

@@ -11,23 +11,30 @@
     {
       icon: info,
       title: "New ID Card",
-
-      features: [
-        "Biometric data capture",
-        "Photo session included",
-        "Express processing (3-5 days)",
-        "Digital copy provided",
-        "QR code integration",
-      ],
+      link: "/staffID/request-new",
+      features: {
+        name: "Features",
+        list: [
+          "Biometric data capture",
+          "Photo session included",
+          "Express processing (3-5 days)",
+          "Digital copy provided",
+          "QR code integration",
+        ],
+      },
 
       buttonText: "Get new ID card",
       color: "#2563eb",
     },
     {
+      link: "/staffID/slug/Services/renewal",
       icon: info,
       title: "ID Renewal",
 
-      features: ["Fast-track renewal", "Biometric update optional"],
+      features: {
+        name: "Features",
+        list: ["Fast-track renewal", "Biometric update optional"],
+      },
 
       buttonText: "Renew ID card",
       color: "#16a34a",
@@ -40,13 +47,13 @@
   <BackdropHero
     subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
   >
-    <h1
-      class="w-full text-[58px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold"
-    >
+    <span>
       Financial <span class="text-blue-600"> Services</span>
-    </h1>
+    </span>
   </BackdropHero>
-  <div class="flex w-full gap-[80px] justify-center py-[150px]">
+  <div
+    class="flex p-5 items-center md:flex-row flex-col w-full md:gap-[20px] lg:gap-[80px] justify-center py-[150px]"
+  >
     {#each services as service}
       <ServiceCard data={service} />
     {/each}

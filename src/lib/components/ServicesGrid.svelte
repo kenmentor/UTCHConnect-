@@ -8,7 +8,6 @@
   import message from "$lib/assets/message.png";
   import avater from "$lib/assets/avater.png";
   import Group from "$lib/assets/Group.png";
-
   // Service items
   const serviceItems = [
     {
@@ -23,6 +22,7 @@
         " BAAMS (Biometric) ",
         " iPass System",
       ],
+      link: "service/identity",
     },
     {
       id: "2",
@@ -31,18 +31,33 @@
       icon: Coffee,
       subtitle: "PayIQue System",
       features: [" Salary Tracking", "  Payslips", " Payment Management"],
+      link: "service/financial",
     },
     {
       id: "3",
       title: "Communication Hub",
       desc: "Internal messaging and feedback systems",
       icon: Group,
+      subtitle: "Features",
+
+      features: ["UCTH Messenger ", "  Feedback", " iReport", "System"],
+      link: "service/identity",
     },
+
     {
       id: "4",
       title: "Clinical & Operations",
       desc: "Hospital operations and clinical systems.",
       icon: calendar,
+      subtitle: "Platforms",
+      features: [
+        " Platforms",
+        "  ClinIQx",
+        " EziBiz",
+        " iScheduler",
+        "   Staff ID Cards",
+      ],
+      link: "service/identity",
     },
   ];
 </script>
@@ -55,7 +70,7 @@
         <FeatureCard
           title={item.title}
           desc={item.desc}
-          href={`/${item.id}`}
+          href={`/${item.link}`}
           icon={item.icon}
           features={item.features}
           subtitle={item.subtitle}

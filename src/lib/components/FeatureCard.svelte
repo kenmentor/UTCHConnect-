@@ -10,6 +10,7 @@
   export let icon: string | null = null;
   export let subtitle: string = "";
   export let features: string[] = [];
+
   import { Button } from "carbon-components-svelte";
   import { ArrowRight, Earth } from "carbon-icons-svelte";
 </script>
@@ -48,10 +49,12 @@
 
   <!-- Action -->
   <div>
-    <button
-      class="  btn flex gap-[10px] !bg-white !text-[var(--color-primary)] items-center"
-      >Get Started <ArrowRight />
-    </button>
+    <a {href}>
+      <button
+        class="  btn flex gap-[10px] !bg-transparent !text-[var(--color-primary)] items-center"
+        >Get Started <ArrowRight />
+      </button>
+    </a>
   </div>
 </div>
 

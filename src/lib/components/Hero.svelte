@@ -32,9 +32,7 @@
     <div>
       <button
         class=" btn mx-auto lg:mx-0 !px-[25px] flex gap-[10px] text-white py-[11px] text-[16px]"
-        href="/"
         color="red"
-        icon={Breadcrumb}
       >
         Get Started <ArrowRight />
       </button>

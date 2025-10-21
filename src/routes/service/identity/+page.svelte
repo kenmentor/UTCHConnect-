@@ -10,27 +10,36 @@
   const services: ServiceCardProps[] = [
     {
       icon: info,
-      title: "New ID Card",
+      title: "Create Staff Account",
+      desc: "Register for a new UCTH digital identity through our WhatsApp bot. Quick, secure, and automated account creation.",
+      features: {
+        name: "What You'll Get:",
+        list: [
+          "Personnel IDID Registration",
+          "Digital Payslips",
+          "Transaction History",
+        ],
+      },
 
-      features: [
-        "Biometric data capture",
-        "Photo session included",
-        "Express processing (3-5 days)",
-        "Digital copy provided",
-        "QR code integration",
-      ],
-
-      buttonText: "Get new ID card",
+      buttonText: "Create Via Whatsapp",
       color: "#2563eb",
     },
     {
       icon: info,
       title: "ID Renewal",
 
-      features: ["Fast-track renewal", "Biometric update optional"],
-
-      buttonText: "Renew ID card",
-      color: "#16a34a",
+      desc: "Update your existing UCTH digital identity information quickly and securely through WhatsApp.",
+      features: {
+        name: "Modification Options:",
+        list: [
+          "Update Personal Information",
+          "Change Contact Details",
+          "Express processing (3-5 days)",
+          "Update Department Info",
+        ],
+      },
+      buttonText: "Modify Via Whatsapp",
+      color: "#BA0EA6",
     },
   ];
 </script>

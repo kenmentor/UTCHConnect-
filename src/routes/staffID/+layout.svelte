@@ -78,14 +78,14 @@
   </div>
 
   <!-- Main content with sidebar -->
-  <div class="h-svh relative flex">
+  <div class="h-svh relative">
     <SideBar {sideData} />
 
     <div
-      class="flex-1 w-full h-full overflow-x-scroll flex flex-col gap-3
-             md:pl-[332px] pl-[70px] md:pb-[300px] pb-[300px]"
+      class="flex-1 w-full h-svh overflow-x-scroll flex flex-col gap-3
+             pb-[300px] fixed left-[70px] md:left-[380px]"
     >
-      {@render children?.()}
+      <slot />
     </div>
   </div>
 </main>

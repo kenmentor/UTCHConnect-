@@ -7,6 +7,30 @@
   import InformationDesk from "$lib/components/informationDesk.svelte";
   import Cta from "$lib/components/CTA.svelte";
   import ServiceCenter from "$lib/components/ServiceCenter.svelte";
+  import info from "$lib/assets/info.png";
+  const data = [
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "1",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "2",
+    },
+    {
+      img: info,
+      title: "CMD Office: New Policy Updates.",
+      description:
+        "Important policy changes from the Chief Medical Director's office regarding patient care protocols and staff guidelines.",
+      id: "3",
+    },
+  ];
 </script>
 
 <Header />
@@ -24,7 +48,11 @@
   class="cds-custom-theme relative flex min-h-screen flex-col gap-10 px-4 sm:px-8 lg:px-16 xl:px-32"
 >
   <Cta />
-  <InformationDesk />
+  <InformationDesk
+    {data}
+    isReadmore={true}
+    desc="Stay informed with the latest developments, policy changes, and important announcements from UCTH"
+  />
   <ServiceCenter />
 
   <ConnectWithYu />

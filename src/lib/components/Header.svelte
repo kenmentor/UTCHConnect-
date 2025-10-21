@@ -12,14 +12,14 @@
   // Navigation links
   let navigation = [
     { link: "/", name: "Home", id: 1 },
-    { link: "staffID/slug/Overview", name: "Service", id: 2 },
-    { link: "about-us", name: "About Us", id: 3 },
-    { link: "informationDesk", name: "Info Desk", id: 4 },
+    { link: "/service", name: "Service", id: 2 },
+    { link: "/about-us", name: "About Us", id: 3 },
+    { link: "/informationDesk", name: "Info Desk", id: 4 },
   ];
 </script>
 
 <header
-  class="z-20 p-3 sm:px-6 md:px-12 lg:px-20 xl:px-[140px]
+  class="z-20 p-3 sm:px-6 md:px-2 lg:px-20 xl:px-[140px]
          bg-white/30 backdrop-blur-md flex items-center
          top-0 left-0 fixed right-0 justify-between
          border-b border-white/20 shadow-sm"
@@ -83,7 +83,7 @@
 
   <!-- Mobile Menu Button -->
   <button
-    class="md:hidden p-2 rounded-lg hover:bg-white/40"
+    class="md:hidden p-2 rounded-lg !bg-transparent"
     on:click={() => (mobileMenuOpen = !mobileMenuOpen)}
   >
     {#if mobileMenuOpen}

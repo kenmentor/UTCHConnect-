@@ -4,10 +4,11 @@
     icon?: string;
     color?: string;
     title: string;
-    desc: string;
-    features?: string[];
+    desc?: string;
+    features?: { name: string; list: string[] };
     price?: string;
     buttonText?: string;
+    link: string;
   }
 </script>
 
@@ -33,7 +34,7 @@
 </script>
 
 <div
-  class="px-[34px] py-[46px] m-3.5 flex flex-col gap-[24px] outline shadow min-h-[480px] flex-1 w-full max-w-[380px]"
+  class="px-[34px] py-[46px] m-3.5 flex flex-col gap-[24px] outline shadow min-h-[480px] flex-1 w-full max-w-[567px]"
   style={`outline-color: ${color};`}
 >
   <!-- Header -->
@@ -51,15 +52,22 @@
       </div>
     {/if}
     <div>
-      <h2 class="font-semibold text-lg">{data.title}</h2>
-      <p class="text-gray-600 text-sm">{data.desc}</p>
+      <h2 class=" text-left font-medium text-[28px] text-[#333333] text-lg">
+        {data.title}
+      </h2>
     </div>
   </div>
+  <p class="text-[#333333] text-[22px]">{data.desc}</p>
 
   <!-- Features -->
-  {#if data.features?.length}
-    <ul class="list-disc text-[15px] flex flex-col gap-[10px] pl-6 flex-grow">
-      {#each data.features as feature}
+  <div>
+    <h3 class=" font-semibold text-[22px] text-[#333333]">Features:</h3>
+  </div>
+  {#if data.features?.list?.length}
+    <ul
+      class="list-disc text-[22px] flex flex-col text-[#333333] gap-[18px] pl-6 flex-grow"
+    >
+      {#each data.features.list as feature}
         <li>{feature}</li>
       {/each}
     </ul>
@@ -74,11 +82,13 @@
 
   <!-- CTA Button -->
   <div>
-    <Button
-      class="!w-full !flex !items-center !justify-center !text-[16px] font-medium"
-      style={`background-color: ${color};`}
-    >
-      {buttonText}
-    </Button>
+    <a href={`${data.link}`}>
+      <button
+        class=" text-[22px] !w-full !flex !items-center !justify-center font-medium !px-[18px]"
+        style={`background-color: ${color};`}
+      >
+        {buttonText}
+      </button>
+    </a>
   </div>
 </div>
