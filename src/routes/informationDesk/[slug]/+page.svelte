@@ -79,6 +79,7 @@
       <!-- Responsive image height -->
       <img
         src={info}
+        alt="Electronic Health Records System Launch"
         class="w-full h-auto max-h-[400px] sm:max-h-[500px] lg:max-h-[609px] aspect-video object-cover"
       />
 

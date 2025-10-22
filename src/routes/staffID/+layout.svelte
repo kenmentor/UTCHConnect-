@@ -56,8 +56,6 @@
       link: "/staffID/slug/Settings",
     },
   ];
-
-  export let children: any;
 </script>
 
 <Header authorized={true} pageId={2} />

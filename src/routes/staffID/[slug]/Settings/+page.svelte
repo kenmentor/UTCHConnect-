@@ -59,12 +59,16 @@
       Preferences
     </h2>
     <div class="flex items-center justify-between py-2">
-      <label class="text-gray-700 font-medium">Notifications</label>
-      <Toggle bind:toggled={settings.notifications} />
+      <label for="settingnot" class="text-gray-700 font-medium"
+        >Notifications</label
+      >
+      <Toggle id="settingnot" bind:toggled={settings.notifications} />
     </div>
     <div class="flex items-center justify-between py-2">
-      <label class="text-gray-700 font-medium">Dark Mode</label>
-      <Toggle bind:toggled={settings.darkMode} />
+      <label for="settingdark" class="text-gray-700 font-medium"
+        >Dark Mode</label
+      >
+      <Toggle id="settingdark" bind:toggled={settings.darkMode} />
     </div>
     <div>
       <Select
@@ -132,8 +136,10 @@
     <PasswordInput id="confirmPassword" labelText="Confirm New Password" />
 
     <div class="flex items-center justify-between py-2">
-      <label class="text-gray-700 font-medium">Two-Factor Authentication</label>
-      <Toggle bind:toggled={settings.twoFactorAuth} />
+      <label for="twoauth" class="text-gray-700 font-medium"
+        >Two-Factor Authentication</label
+      >
+      <Toggle id="twoauth" bind:toggled={settings.twoFactorAuth} />
     </div>
 
     <div class="flex items-center justify-between py-2">
@@ -175,8 +181,10 @@
       Data & Privacy
     </h2>
     <div class="flex items-center justify-between py-2">
-      <label class="text-gray-700 font-medium">Allow Data Sharing</label>
-      <Toggle bind:toggled={settings.shareData} />
+      <label for="shareDataToggle" class="text-gray-700 font-medium">
+        Allow Data Sharing
+      </label>
+      <Toggle id="shareDataToggle" bind:toggled={settings.shareData} />
     </div>
 
     <Button kind="secondary" on:click={downloadData}>Download My Data</Button>

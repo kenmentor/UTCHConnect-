@@ -47,7 +47,7 @@
           class="p-4 bg-blue-100 rounded-full text-blue-600 mb-4
           group-hover:scale-110 transition-transform"
         >
-          <Phone size={28} />
+          <Phone size={24} />
         </div>
         <h2 class="text-lg font-semibold mb-1">Call Us</h2>
         <p class="text-gray-600 text-sm">+234-801-234-5678</p>
@@ -64,7 +64,7 @@
           class="p-4 bg-green-100 rounded-full text-green-600 mb-4
           group-hover:scale-110 transition-transform"
         >
-          <Email size={28} />
+          <Email size={24} />
         </div>
         <h2 class="text-lg font-semibold mb-1">Email Us</h2>
         <p class="text-gray-600 text-sm">info@unicalradio.edu.ng</p>
@@ -81,7 +81,7 @@
           class="p-4 bg-purple-100 rounded-full text-purple-600 mb-4
           group-hover:scale-110 transition-transform"
         >
-          <Location size={28} />
+          <Location size={24} />
         </div>
         <h2 class="text-lg font-semibold mb-1">Visit Us</h2>
         <p class="text-gray-600 text-sm">University of Calabar</p>
@@ -122,9 +122,3 @@
 </main>
 
 <Footer />
-
-<style>
-  .btn {
-    background: #e6f4ff;
-  }
-</style>

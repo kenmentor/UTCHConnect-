@@ -98,11 +98,13 @@
 
         <div>
           <label
+            for="matric"
             class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
           >
             Matric / Staff Number
           </label>
           <input
+            id="matric"
             type="text"
             placeholder="e.g. CSC/20/12345"
             bind:value={profile.matricNumber}
@@ -133,11 +135,13 @@
 
         <div>
           <label
+            for="department"
             class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
           >
             Department
           </label>
           <input
+            id="department"
             type="text"
             placeholder="e.g. Computer Science"
             bind:value={profile.department}

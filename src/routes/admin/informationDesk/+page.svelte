@@ -87,8 +87,8 @@
   </div>
 
   <div class="space-y-2">
-    <label class="font-medium">Target Audience</label>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <label for="target" class="font-medium">Target Audience</label>
+    <div id="target" class=" grid grid-cols-2 md:grid-cols-3 gap-4">
       <Checkbox labelText="All staff" bind:checked={news.audience.allStaff}
         >All Staff</Checkbox
       >

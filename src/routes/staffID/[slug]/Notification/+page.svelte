@@ -87,7 +87,6 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
       {#each notifications as n (n.id)}
         <article
-          role="article"
           aria-labelledby={"notif-" + n.id}
           class="flex gap-4 p-5 bg-white border-l"
           style={`border-left: 4px solid ${borderColor(n.type)}; min-height: 120px;`}

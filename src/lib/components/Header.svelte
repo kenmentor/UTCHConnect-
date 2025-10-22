@@ -99,7 +99,15 @@
   <!-- backdrop -->
   <div
     class="fixed inset-0 bg-black/40 z-10"
+    role="button"
+    tabindex="0"
+    aria-label="Close menu"
     on:click={() => (mobileMenuOpen = false)}
+    on:keydown={(e) => {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+        mobileMenuOpen = false;
+      }
+    }}
   ></div>
 
   <!-- sidebar -->

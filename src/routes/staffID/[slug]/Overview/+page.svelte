@@ -91,7 +91,7 @@
   <div class="flex flex-col overflow-y-scroll flex-1 pb-[300px] max-w-[710px]">
     <div class="px-[30px] flex flex-col gap-2">
       <h1>My Services</h1>
-      <a href="" class="text-[var(--color-primary)]"> View All</a>
+      <a href="#h" class="text-[var(--color-primary)]"> View All</a>
     </div>
     <Grid>
       <Row>

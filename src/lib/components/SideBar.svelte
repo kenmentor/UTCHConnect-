@@ -56,9 +56,8 @@
                   />
                 {:else}
                   <!-- fallback if something is wrong -->
-                  <span
-                    class="inline-block w-6 h-6 md:w-8 md:h-8 bg-gray-200"
-                  />
+                  <span class="inline-block w-6 h-6 md:w-8 md:h-8 bg-gray-200"
+                  ></span>
                 {/if}
               {/if}
               <span class="hidden md:inline text-[22px] font-medium"
