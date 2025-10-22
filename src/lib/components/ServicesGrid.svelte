@@ -4,8 +4,6 @@
   // Assets
   import Coffee from "$lib/assets/Coffee.png";
   import calendar from "$lib/assets/calendar.png";
-  import money from "$lib/assets/money.png";
-  import message from "$lib/assets/message.png";
   import avater from "$lib/assets/avater.png";
   import Group from "$lib/assets/Group.png";
   // Service items
@@ -40,7 +38,7 @@
       icon: Group,
       subtitle: "Features",
 
-      features: ["UCTH Messenger ", "  Feedback", " iReport", "System"],
+      features: ["UCTH Messenger", "  Feedback", " iReport", "System"],
       link: "service/identity",
     },
 

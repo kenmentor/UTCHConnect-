@@ -2,9 +2,7 @@
   export let title: string = "Hero Title";
   export let subtitle: string = "Hero Subtitle";
 
-  import { Button, Breadcrumb } from "carbon-components-svelte";
   import backgroundimage from "$lib/assets/backgroundimage.jpg";
-  import { ArrowDownRight, ArrowRight } from "carbon-icons-svelte";
 </script>
 
 <section

@@ -2,11 +2,10 @@
 <script lang="ts">
   export let title: string = "Hero Title";
   export let subtitle: string = "Hero Subtitle";
-  import { Button, Breadcrumb } from "carbon-components-svelte";
 
   import logo from "$lib/assets/logo.png";
   import backgroundimage from "$lib/assets/backgroundimage.jpg";
-  import { ArrowDownRight, ArrowRight } from "carbon-icons-svelte";
+  import { ArrowRight } from "carbon-icons-svelte";
 </script>
 
 <section

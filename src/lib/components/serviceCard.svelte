@@ -14,6 +14,7 @@
 
 <script lang="ts">
   import { Button } from "carbon-components-svelte";
+  import { User } from "lucide-svelte";
 
   // Predefined color palette
   const palette = [
@@ -44,11 +45,12 @@
         class="p-2 size-[54px] flex items-center justify-center"
         style={`background-color: ${color};`}
       >
-        <img
+        <!-- <img
           src={data.icon}
           alt={data.title}
           class="max-h-full max-w-full object-contain"
-        />
+        /> -->
+        <User size={25} color={"white"} />
       </div>
     {/if}
     <div>
