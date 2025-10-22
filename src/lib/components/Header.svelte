@@ -96,9 +96,9 @@
 
 <!-- Overlay + Sidebar -->
 {#if mobileMenuOpen}
-  <!-- backdrop -->
+  <!-- Backdrop -->
   <div
-    class="fixed inset-0 bg-black/40 z-10"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-10 transition-opacity duration-300"
     role="button"
     tabindex="0"
     aria-label="Close menu"
@@ -110,25 +110,36 @@
     }}
   ></div>
 
-  <!-- sidebar -->
+  <!-- Sidebar -->
   <aside
-    class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-20 p-6 flex flex-col gap-6 animate-slideIn"
+    class="fixed top-0 left-0 w-64 h-full bg-white/95 shadow-xl z-20 p-6 flex flex-col gap-6 border-r border-gray-200 animate-slideIn"
   >
-    <div class="flex justify-between items-center mb-6">
-      <img src={YOUreka} alt="YOUreka" class="h-10" />
-      <button on:click={() => (mobileMenuOpen = false)}>
+    <!-- Header -->
+    <div
+      class="flex justify-between items-center mb-6 border-b border-gray-100 pb-4"
+    >
+      <div class="flex items-center gap-2">
+        <img src={YOUreka} alt="YOUreka" class="h-9" />
+        <span class="font-semibold text-[16px] text-[var(--color-primary)]"
+          >YOUreka</span
+        >
+      </div>
+      <button
+        on:click={() => (mobileMenuOpen = false)}
+        class="p-2 rounded-full hover:bg-gray-100 transition-colors"
+      >
         <Close size={24} />
       </button>
     </div>
 
-    <!-- Mobile Navigation (reuses same array as desktop) -->
-    <nav class="flex flex-col gap-4 text-[16px]">
+    <!-- Navigation -->
+    <nav class="flex flex-col gap-4 text-[16px] font-medium">
       {#each navigation as item}
         <a
           href={item.link}
           class={pageId === item.id
             ? "text-[var(--color-primary)] font-medium"
-            : "text-[#333333]"}
+            : "text-[#333333] hover:text-[var(--color-primary)] transition-colors duration-200"}
           on:click={() => (mobileMenuOpen = false)}
         >
           {item.name}
@@ -136,28 +147,51 @@
       {/each}
     </nav>
 
-    <!-- Auth Section (Mobile) -->
+    <!-- Divider -->
+    <div class="border-t border-gray-200 my-6"></div>
+
+    <!-- Auth Section -->
     <div class="mt-auto">
       {#if !authorized}
         <Button
           href="/login"
-          class="w-full !flex !justify-center !bg-[var(--color-primary)]"
-          >Login</Button
+          class="w-full !flex !justify-center !bg-[var(--color-primary)] !text-white"
         >
-        <Button href="/signup" class="w-full !flex !justify-center mt-2 "
-          >Sign Up</Button
+          Login
+        </Button>
+        <Button
+          href="/signup"
+          class="w-full !flex !justify-center mt-3 !bg-gray-100 !text-black hover:!bg-gray-200"
         >
+          Sign Up
+        </Button>
       {:else}
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
           <img src={not} alt="" class="w-10 h-10 rounded-full object-cover" />
           <div>
-            <h2 class="text-[14px] font-semibold">Joy Peace</h2>
-            <h4 class="text-[12px]">Staff Member</h4>
+            <h2 class="text-[15px] font-semibold">Joy Peace</h2>
+            <h4 class="text-[13px] text-gray-500">Staff Member</h4>
           </div>
         </div>
       {/if}
     </div>
   </aside>
+
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0.4;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    .animate-slideIn {
+      animation: slideIn 0.35s ease-out forwards;
+    }
+  </style>
 {/if}
 
 <style>
