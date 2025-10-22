@@ -2,9 +2,7 @@
   import ServicesGrid from "./ServicesGrid.svelte";
 </script>
 
-<section
-  class="flex flex-col items-center bg-white justify-center px-4 sm:px-6 lg:px-8"
->
+<section class="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
   <div class="w-full max-w-[710px] text-center py-5">
     <h5 class="pb-5 text-[16px] font-medium">
       Service <span class="text-[var(--color-primary)]">Center</span>

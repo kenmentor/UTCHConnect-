@@ -58,10 +58,10 @@
 </script>
 
 <section class="bg-white w-full py-14">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto px-1 md:p-4 sm:px-6 lg:px-12">
     <!-- Responsive Grid -->
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+      class="  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
     >
       {#each serviceItems as item (item.id)}
         <FeatureCard

@@ -16,7 +16,7 @@
 </script>
 
 <div
-  class="m-3.5 shadow-xl bg-[#E8EFFE80] p-10 flex flex-col items-center gap-5 w-full h-full"
+  class=" shadow-xl bg-[#E8EFFE80] p-10 flex flex-col items-center gap-5 w-full h-full"
 >
   <!-- Icon section -->
   {#if icon}
