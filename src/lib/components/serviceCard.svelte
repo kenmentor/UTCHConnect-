@@ -59,7 +59,7 @@
       </h2>
     </div>
   </div>
-  <p class="text-[#333333] text-[22px]">{data.desc}</p>
+  <p class="text-[#333333] text-[22px] text-left">{data.desc}</p>
 
   <!-- Features -->
   <div>

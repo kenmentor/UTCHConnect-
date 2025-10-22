@@ -10,41 +10,34 @@
   const services: ServiceCardProps[] = [
     {
       icon: info,
-      title: "Create Staff Account",
-      desc: "Register for a new UCTH digital identity through our WhatsApp bot. Quick, secure, and automated account creation.",
-      link: "create-staff-account",
+      title: "New ID Card",
+      link: "service/identity/id-new",
       features: {
-        name: "What You'll Get:",
-
+        name: "Features",
         list: [
-          "Personnel IDID Registration",
-          "Digital Payslips",
-          "Transaction History",
+          "Biometric data capture",
+          "Photo session included",
+          "Express processing (3-5 days)",
+          "Digital copy provided",
+          "QR code integration",
         ],
       },
 
-      buttonText: "Create Via Whatsapp",
+      buttonText: "Get new ID card",
       color: "#2563eb",
     },
     {
+      link: "service/identity/id-renewal",
       icon: info,
       title: "ID Renewal",
 
-      desc: "Update your existing UCTH digital identity information quickly and securely through WhatsApp.",
-
-      link: "create-staff-account",
       features: {
-        name: "Modification Options:",
-
-        list: [
-          "Update Personal Information",
-          "Change Contact Details",
-          "Express processing (3-5 days)",
-          "Update Department Info",
-        ],
+        name: "Features",
+        list: ["Fast-track renewal", "Biometric update optional"],
       },
-      buttonText: "Modify Via Whatsapp",
-      color: "#BA0EA6",
+
+      buttonText: "Renew ID card",
+      color: "#16a34a",
     },
   ];
 </script>
@@ -54,11 +47,9 @@
   <BackdropHero
     subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
   >
-    <h1
-      class="w-full text-[58px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold"
-    >
+    <span>
       Financial <span class="text-blue-600"> Services</span>
-    </h1>
+    </span>
   </BackdropHero>
   <div
     class="flex p-5 items-center md:flex-row flex-col w-full md:gap-[20px] lg:gap-[80px] justify-center py-[150px]"

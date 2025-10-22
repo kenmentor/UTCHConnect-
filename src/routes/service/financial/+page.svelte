@@ -10,34 +10,40 @@
   const services: ServiceCardProps[] = [
     {
       icon: info,
-      title: "New ID Card",
-      link: "service/financial/new",
+      title: "Create Staff Account",
+      desc: "Register for a new UCTH digital identity through our WhatsApp bot. Quick, secure, and automated account creation.",
+      link: "service/financial/id-create",
       features: {
-        name: "Features",
+        name: "What You'll Get:",
+
         list: [
-          "Biometric data capture",
-          "Photo session included",
-          "Express processing (3-5 days)",
-          "Digital copy provided",
-          "QR code integration",
+          "Personnel IDID Registration",
+          "Digital Payslips",
+          "Transaction History",
         ],
       },
 
-      buttonText: "Get new ID card",
+      buttonText: "Create Via Whatsapp",
       color: "#2563eb",
     },
     {
-      link: "/staffID/slug/Services/renewal",
       icon: info,
       title: "ID Renewal",
 
-      features: {
-        name: "Features",
-        list: ["Fast-track renewal", "Biometric update optional"],
-      },
+      desc: "Update your existing UCTH digital identity information quickly and securely through WhatsApp.",
 
-      buttonText: "Renew ID card",
-      color: "#16a34a",
+      link: "service/financial/id-renewal",
+      features: {
+        name: "Modification Options:",
+
+        list: [
+          "Update Personal Information",
+          "Change Contact Details",
+          "Express processing (3-5 days)",
+        ],
+      },
+      buttonText: "Modify Via Whatsapp",
+      color: "#BA0EA6",
     },
   ];
 </script>
@@ -47,12 +53,14 @@
   <BackdropHero
     subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
   >
-    <span>
+    <h1
+      class="w-full text-[58px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold"
+    >
       Financial <span class="text-blue-600"> Services</span>
-    </span>
+    </h1>
   </BackdropHero>
   <div
-    class="flex p-5 items-center md:flex-row flex-col w-full md:gap-[20px] lg:gap-[80px] justify-center py-[150px]"
+    class="  flex p-5 items-center md:flex-row flex-col w-full md:gap-[20px] lg:gap-[80px] justify-center md:py-[100px]"
   >
     {#each services as service}
       <ServiceCard data={service} />
