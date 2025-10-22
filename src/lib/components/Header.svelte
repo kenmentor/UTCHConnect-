@@ -1,14 +1,14 @@
 <script lang="ts">
   import { Button } from "carbon-components-svelte";
   import { Menu, Close } from "carbon-icons-svelte";
-  import YOUreka from "$lib/assets/YOUREKA.png";
+  // import YOUreka from "$lib/assets/YOUREKA.png";
   import not from "$lib/assets/avater.png";
 
   export let authorized: boolean = false;
   export let pageId: number = 1;
 
   let mobileMenuOpen: boolean = false;
-
+  const YOUreka = "https://your-logo-url.com/YOUREKA.png"; // Replace with actual logo URL
   // Navigation links
   let navigation = [
     { link: "/", name: "Home", id: 1 },
