@@ -12,8 +12,10 @@
       icon: info,
       title: "Create Staff Account",
       desc: "Register for a new UCTH digital identity through our WhatsApp bot. Quick, secure, and automated account creation.",
+      link: "create-staff-account",
       features: {
         name: "What You'll Get:",
+
         list: [
           "Personnel IDID Registration",
           "Digital Payslips",
@@ -29,8 +31,11 @@
       title: "ID Renewal",
 
       desc: "Update your existing UCTH digital identity information quickly and securely through WhatsApp.",
+
+      link: "create-staff-account",
       features: {
         name: "Modification Options:",
+
         list: [
           "Update Personal Information",
           "Change Contact Details",

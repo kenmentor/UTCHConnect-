@@ -1,6 +1,5 @@
 <!-- Hero.svelte -->
 <script lang="ts">
-  export let title: string = "Hero Title";
   export let subtitle: string = "Hero Subtitle";
 
   import logo from "$lib/assets/logo.png";

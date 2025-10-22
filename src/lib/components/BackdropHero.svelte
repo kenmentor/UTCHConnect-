@@ -1,5 +1,4 @@
 <script lang="ts">
-  export let title: string = "Hero Title";
   export let subtitle: string = "Hero Subtitle";
 
   import backgroundimage from "$lib/assets/backgroundimage.jpg";
