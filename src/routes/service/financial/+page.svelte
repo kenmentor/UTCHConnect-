@@ -11,7 +11,7 @@
     {
       icon: info,
       title: "New ID Card",
-      link: "/staffID/request-new",
+      link: "service/financial/new",
       features: {
         name: "Features",
         list: [

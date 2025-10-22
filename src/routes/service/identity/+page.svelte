@@ -55,7 +55,9 @@
       Financial <span class="text-blue-600"> Services</span>
     </h1>
   </BackdropHero>
-  <div class="flex w-full gap-[80px] justify-center py-[150px]">
+  <div
+    class="flex p-5 items-center md:flex-row flex-col w-full md:gap-[20px] lg:gap-[80px] justify-center py-[150px]"
+  >
     {#each services as service}
       <ServiceCard data={service} />
     {/each}
