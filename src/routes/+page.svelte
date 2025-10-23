@@ -38,8 +38,10 @@
 <Hero
   subtitle="The Intelligent Digital Identity Services (IDIS) modernizes patient identification and staff authentication at UCTH using advanced digital identity technologies, positioning the hospital as a healthcare innovation leader in Nigeria."
 >
-  <h1 class="w-full max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold">
-    UCTH <span class="text-blue-600"> iDID</span> Services
+  <h1
+    class=" lg:text-left w-full max-w-2xl text-[50px] sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center px-4"
+  >
+    UCTH <span class="text-blue-600"> IDID</span> Services
     <span class="text-blue-600"> Centre </span>
   </h1>
 </Hero>

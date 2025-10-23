@@ -11,7 +11,7 @@
     {
       icon: info,
       title: "New ID Card",
-      link: "service/identity/id-new",
+      link: "identity/id-new",
       features: {
         name: "Features",
         list: [
@@ -27,7 +27,7 @@
       color: "#2563eb",
     },
     {
-      link: "service/identity/id-renewal",
+      link: "identity/id-renewal",
       icon: info,
       title: "ID Renewal",
 

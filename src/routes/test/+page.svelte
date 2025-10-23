@@ -11,14 +11,12 @@
     {
       icon: info,
       title: "New ID Card",
+      link: "",
 
-      features: [
-        "Biometric data capture",
-        "Photo session included",
-        "Express processing (3-5 days)",
-        "Digital copy provided",
-        "QR code integration",
-      ],
+      features: {
+        name: "",
+        list: ["Fast-track renewal", "Biometric update optional"],
+      },
 
       buttonText: "Get new ID card",
       color: "#2563eb",
@@ -26,8 +24,12 @@
     {
       icon: info,
       title: "ID Renewal",
+      link: "",
 
-      features: ["Fast-track renewal", "Biometric update optional"],
+      features: {
+        name: "",
+        list: ["Fast-track renewal", "Biometric update optional"],
+      },
 
       buttonText: "Renew ID card",
       color: "#16a34a",

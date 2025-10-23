@@ -60,7 +60,7 @@
     <button
       type="button"
       on:click={back}
-      class="flex items-center gap-1 cursor-pointer py-4 text-left bg-transparent border-none focus:outline-none focus:ring-2 focus:ring-[#0050E6] rounded-md"
+      class="!p-0 text-[#161C2D] flex items-center gap-1 cursor-pointer py-4 text-left bg-transparent border-none focus:outline-none"
     >
       <ArrowLeft />
       <h4>Back</h4>

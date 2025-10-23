@@ -30,11 +30,13 @@
       </div>
 
       <div>
-        <button
-          class="btn flex gap-[10px] items-center"
-          style="background-color: var(--color-primary);"
-          >Get Started <span class="text-[30px]">&raquo;</span>
-        </button>
+        <a href="/contact-us">
+          <button
+            class="btn flex gap-[10px] items-center"
+            style="background-color: var(--color-primary);"
+            >Get Started <span class="text-[30px]">&raquo;</span>
+          </button>
+        </a>
       </div>
     </div>
 

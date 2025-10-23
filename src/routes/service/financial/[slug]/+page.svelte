@@ -4,7 +4,7 @@
   import { Checkmark } from "carbon-icons-svelte";
   import { ArrowLeft, AlertCircle } from "lucide-svelte";
   import { fade } from "svelte/transition";
-
+  import profileImage from "$lib/assets/profile.jpg";
   interface Profile {
     matricNumber: string;
     department: string;
@@ -60,7 +60,7 @@
     <button
       type="button"
       on:click={back}
-      class="flex items-center gap-1 cursor-pointer py-4 text-left bg-transparent border-none focus:outline-none focus:ring-2 focus:ring-[#0050E6] rounded-md"
+      class="!p-0 text-[#161C2D] flex items-center gap-1 cursor-pointer py-4 text-left bg-transparent border-none focus:outline-none"
     >
       <ArrowLeft />
       <h4>Back</h4>
@@ -121,7 +121,7 @@
     <hr class="border-gray-200 mb-8" />
 
     <!-- STEP 1 -->
-    {#if step === 1}
+    {#if step === 10}
       <div transition:fade class="space-y-6">
         <h2 class="text-xl font-semibold text-gray-900">
           Step 1 — Search Profile
@@ -166,9 +166,15 @@
             class="text-left active:bg-[#0050E60D] bg-white p-4 flex flex-col items-start gap-2 cursor-pointer rounded-md focus:outline-none focus:ring-2 focus:ring-[#0050E6]"
           >
             <p class="text-[12px] text-[#024896]">87.9% Match</p>
-            <p class="text-[18px] font-medium">Dr. Enyiego Elihu Osun</p>
-            <p class="text-[13px] font-semibold"><span>File No:</span> 5275</p>
-            <p class="text-[13px]"><span>Department:</span> PAEDIATRIC</p>
+            <p class="text-[18px] font-medium text-[#161C2D]">
+              Dr. Enyiego Elihu Osun
+            </p>
+            <p class="text-[13px] font-semibold text-[#161C2D]">
+              <span>File No:</span> 5275
+            </p>
+            <p class="text-[13px] text-[#161C2D]">
+              <span>Department:</span> PAEDIATRIC
+            </p>
           </button>
         </div>
 
@@ -182,7 +188,7 @@
     {/if}
 
     <!-- STEP 3 -->
-    {#if step === 3}
+    {#if step === 1}
       <div transition:fade class="space-y-6">
         <div class="flex sm:flex-row bg-[#30BA0E1A] rounded-md shadow-sm">
           <div class="w-full sm:w-4 max-w-2 bg-green-600 sm:rounded-l-md"></div>
@@ -197,7 +203,11 @@
         </div>
 
         <div class="flex flex-col justify-center items-center gap-[4px]">
-          <img src="" alt="profile" class="size-[123px] rounded-full" />
+          <img
+            src={profileImage}
+            alt="profile"
+            class="size-[123px] rounded-full object-center"
+          />
           <h3 class="text-[18px] font-semibold">Dr. Enyiego Elihu Osun</h3>
           <p class="text-[13px] text-[#161C2D]">Department of Paediatric</p>
           <p
@@ -210,11 +220,22 @@
         <div class="flex sm:flex-row bg-[#0050E60D] rounded-md shadow-sm">
           <div class="w-full sm:w-4 max-w-2 bg-[#0050E6] sm:rounded-l-md"></div>
           <div class="p-6 flex flex-col items-start">
-            <p><strong>Full Name:</strong> ENYIEGO, Elihu Osim</p>
-            <p><strong>IDID Reference:</strong> 2396704605</p>
-            <p><strong>Department:</strong> Paediatrics</p>
-            <p><strong>File Number:</strong> 3018719113</p>
-            <p><strong>Domain Reference:</strong> UCTH/P/5275</p>
+            <p class="flex gap-20">
+              <strong class=" w-[100px] text-left">Full Name:</strong> ENYIEGO, Elihu
+              Osim
+            </p>
+            <p class="flex gap-20">
+              <strong class=" w-[100px] text-left">IDID Reference:</strong> 2396704605
+            </p>
+            <p class="flex gap-20">
+              <strong class=" w-[100px] text-left">Department:</strong> Paediatrics
+            </p>
+            <p class="flex gap-20">
+              <strong class=" w-[100px] text-left">File Number:</strong> 3018719113
+            </p>
+            <p class="flex gap-20">
+              <strong class=" w-[100px] text-left">Domain Reference:</strong> UCTH/P/5275
+            </p>
           </div>
         </div>
 
