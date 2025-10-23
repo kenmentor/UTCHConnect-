@@ -9,17 +9,20 @@
   import info from "$lib/assets/info.png";
   import Information from "./Information.svelte";
   export let isReadmore = false;
-  export let title: string = "Latest News & Updates";
+  export let title: string = "Information Desk";
   export let desc: string = "";
 
   export let data: Data[];
 </script>
 
-<section
-  class="min-h-screen flex flex-col items-center justify-center bg-zinc-50 py-16"
->
+<section class="min-h-screen flex flex-col items-center justify-center py-16">
+  <div>
+    <h5 class="pb-5 text-[16px] font-medium">
+      Blog <span class="text-[var(--color-primary)]">Center</span>
+    </h5>
+  </div>
   <h1
-    class="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] mb-6 text-center font-semibold"
+    class="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-6 text-center font-semibold"
   >
     {title}
   </h1>

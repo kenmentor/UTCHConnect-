@@ -121,7 +121,7 @@
       <div
         class=" text-center max-w-[476px] bg-[#D8DAE5] text-[#0057B8] font-semibold text-[34px] px-[29px] py-[60px]"
       >
-        Every Future Possible 25 States Reached
+        Every Future Possible25 States Reached
       </div>
     </div>
   </section>

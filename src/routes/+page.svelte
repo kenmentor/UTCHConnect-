@@ -44,15 +44,9 @@
   </h1>
 </Hero>
 
-<main
-  class="cds-custom-theme relative flex min-h-screen flex-col gap-10 px-4 sm:px-8 lg:px-16 xl:px-32"
->
+<main class="cds-custom-theme relative flex min-h-screen flex-col">
   <Cta />
-  <InformationDesk
-    {data}
-    isReadmore={true}
-    desc="Stay informed with the latest developments, policy changes, and important announcements from UCTH"
-  />
+  <InformationDesk {data} isReadmore={true} desc="" />
   <ServiceCenter />
 
   <ConnectWithYu />

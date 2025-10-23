@@ -31,9 +31,9 @@
 
       <div>
         <button
-          class="btn flex gap-[10px]"
+          class="btn flex gap-[10px] items-center"
           style="background-color: var(--color-primary);"
-          >Get Started <ArrowRight />
+          >Get Started <span class="text-[30px]">&raquo;</span>
         </button>
       </div>
     </div>

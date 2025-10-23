@@ -51,8 +51,8 @@
   <div>
     <a {href}>
       <button
-        class="  btn flex gap-[10px] !bg-transparent !text-[var(--color-primary)] items-center"
-        >Get Started <ArrowRight />
+        class="flex gap-4 !text-[16px] justify-center items-centergap-[10px] !bg-transparent !text-[var(--color-primary)] items-center"
+        >Get Started <span class="text-[30px]">&raquo;</span>
       </button>
     </a>
   </div>
