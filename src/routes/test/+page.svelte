@@ -1,38 +1,58 @@
 <script lang="ts">
-  import { animate, stagger, inView } from "motion";
-  import { onMount } from "svelte";
+  import BackdropHero from "$lib/components/BackdropHero.svelte";
+  import Header from "$lib/components/Header.svelte";
+  import ServiceCard, {
+    type ServiceCardProps,
+  } from "$lib/components/serviceCard.svelte";
 
-  onMount(() => {
-    // Animate section fade-in when it comes into view
-    inView("section", (entry: { target: Element }) => {
-      const target = entry.target as HTMLElement;
-      animate(
-        target.querySelectorAll("h1, p"),
-        { opacity: [0, 1], y: [40, 0] },
-        { duration: 0.8, delay: stagger(0.15), easing: "ease-out" }
-      );
-    });
-  });
+  import info from "$lib/assets/avater.png";
+  import Footer from "$lib/components/Footer.svelte";
+  const services: ServiceCardProps[] = [
+    {
+      icon: info,
+      title: "New ID Card",
+
+      features: [
+        "Biometric data capture",
+        "Photo session included",
+        "Express processing (3-5 days)",
+        "Digital copy provided",
+        "QR code integration",
+      ],
+
+      buttonText: "Get new ID card",
+      color: "#2563eb",
+    },
+    {
+      icon: info,
+      title: "ID Renewal",
+
+      features: ["Fast-track renewal", "Biometric update optional"],
+
+      buttonText: "Renew ID card",
+      color: "#16a34a",
+    },
+  ];
 </script>
 
-<section
-  class="gap-10 px-4 sm:px-8 lg:px-16 xl:px-32 bg-zinc-50 flex justify-center"
->
-  <div
-    class="flex flex-col items-center gap-8 py-20 px-4 sm:px-8 lg:px-16 max-w-5xl"
+<Header />
+<main>
+  <BackdropHero
+    subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
   >
     <h1
-      class="text-center text-2xl sm:text-3xl lg:text-[48px] max-w-[850px] font-semibold leading-relaxed"
+      class="w-full text-[58px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold"
     >
-      University of Calabar (UCTH) IDID Services Center
+      Financial <span class="text-blue-600"> Services</span>
     </h1>
-
-    <p class="text-center text-base sm:text-lg leading-relaxed text-zinc-700">
-      Welcome to the UCTH Intelligent Digital Identity (IDID) Services Centre.
-      The University of Calabar Teaching Hospital (UCTH) is committed to digital
-      excellence in healthcare and institutional service management. Here, every
-      staff member and partner is empowered with secure, smart, and seamless
-      digital tools to enhance efficiency, accountability, and service delivery.
-    </p>
+  </BackdropHero>
+  <div class="flex w-full gap-[80px] justify-center py-[150px]">
+    {#each services as service}
+      <ServiceCard data={service} />
+    {/each}
   </div>
-</section>
+</main>
+<Footer />
+
+<style>
+</style>
