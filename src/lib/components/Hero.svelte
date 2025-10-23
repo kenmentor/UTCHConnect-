@@ -24,7 +24,9 @@
     <span class="text-left">
       <slot />
     </span>
-    <p class=" text-left font-light text-sm sm:text-base md:text-lg lg:text-xl">
+    <p
+      class="text-center lg:text-left font-light text-sm sm:text-base md:text-lg lg:text-xl"
+    >
       {subtitle}
     </p>
     <div>

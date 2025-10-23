@@ -11,16 +11,18 @@
   subtitle="Comprehensive digital identity and authentication services designed to enhance security, accountability, and service delivery at UCTH"
 >
   <h1
-    class="w-full max-w-2xl text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center px-4"
+    class=" lg:text-left w-full max-w-2xl text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center px-4"
   >
     Our <span class="text-blue-600">Services</span>
   </h1>
 </Hero>
 
 <section
-  class="flex flex-col gap-6 sm:gap-[90px] justify-center items-center text-center px-4 sm:px-6 pt-[5px] pb-[100px] sm:pb-[200px]"
+  class="   flex flex-col gap-[20px] justify-center items-center text-center px-4 sm:px-6 pt-[10px] lg:pt-[100px] lg:pb-[100px] sm:pb-[70px]"
 >
-  <h1 class="font-semibold text-2xl sm:text-3xl md:text-[48px] leading-tight">
+  <h1
+    class="font-semibold text-2xl sm:text-3xl md:text-[40px] lg:text-[48px] leading-tight mb-[1px] 0"
+  >
     THE UCTH DIGITAL REVOLUTION
   </h1>
   <p
@@ -37,18 +39,18 @@
   </p>
 </section>
 
-<section class="py-[70px] px-4 sm:px-8">
+<section class="py-[50px] px-4 sm:px-8 bg-zinc-50">
   <div
     class="flex flex-col justify-center items-center gap-[20px] sm:gap-[27px] text-center"
   >
     <h3
-      class="font-semibold text-2xl sm:text-[36px] max-w-full sm:max-w-[612px] text-[#333333]"
+      class="font-semibold leading-tight text-2xl sm:text-[36px] max-w-full sm:max-w-[612px] text-[#333333]"
     >
       The Four Pillars of UCTH Transformation
     </h3>
 
     <p
-      class="text-[#333333] text-lg sm:text-[25px] max-w-full sm:max-w-[863px]"
+      class="text-[#333333] text-lg sm:text-[25px] max-w-[893px] leading-tight l sm:max-w-[803px]"
     >
       Each platform is a masterpiece of engineering, designed to work
       independently yet thrive together in perfect digital harmony.
@@ -58,7 +60,7 @@
 </section>
 
 <section
-  class="flex flex-col text-center justify-center items-center gap-[30px] sm:gap-[40px] px-4"
+  class="flex flex-col text-center justify-center items-center gap-[30px] sm:gap-[40px] px-4 pt-[50px]"
 >
   <h1
     class="font-bold text-3xl sm:text-[52px] text-center leading-tight max-w-full sm:max-w-[580px]"

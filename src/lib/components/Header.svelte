@@ -3,12 +3,12 @@
   import { Menu, Close } from "carbon-icons-svelte";
   // import YOUreka from "$lib/assets/YOUREKA.png";
   import not from "$lib/assets/avater.png";
-
+  import YOUreka from "$lib/assets/YOUreka.png";
   export let authorized: boolean = false;
   export let pageId: number = 1;
 
   let mobileMenuOpen: boolean = false;
-  const YOUreka = "https://your-logo-url.com/YOUREKA.png"; // Replace with actual logo URL
+  // const YOUreka = "https://your-logo-url.com/YOUREKA.png"; // Replace with actual logo URL
   // Navigation links
   let navigation = [
     { link: "/", name: "Home", id: 1 },
@@ -37,7 +37,7 @@
   </div>
 
   <!-- Desktop Navigation -->
-  <ul class="hidden md:flex gap-6 lg:gap-10 text-[14px] sm:text-[16px]">
+  <ul class="hidden lg:flex gap-6 lg:gap-10 text-[14px] sm:text-[10px]">
     {#each navigation as item}
       <li class="text-red-700 font-medium text-[16px]">
         <a
@@ -53,7 +53,7 @@
   </ul>
 
   <!-- Auth Section (Desktop only) -->
-  <div class="hidden md:flex gap-2 sm:gap-3">
+  <div class="hidden lg:flex gap-2 sm:gap-3">
     {#if !authorized}
       <a href="/login" class="signup btn font-medium">Login</a>
       <a class="btn" href="/signup">Sign Up</a>
@@ -83,7 +83,7 @@
 
   <!-- Mobile Menu Button -->
   <button
-    class="md:hidden p-2 rounded-lg !bg-transparent"
+    class="lg:hidden p-2 rounded-lg !bg-transparent"
     on:click={() => (mobileMenuOpen = !mobileMenuOpen)}
   >
     {#if mobileMenuOpen}

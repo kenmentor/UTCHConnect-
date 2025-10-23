@@ -29,8 +29,14 @@
 
   <!-- Content -->
   <div class="p-4 sm:p-6">
-    <h4 class="text-lg sm:text-xl md:text-2xl font-medium mb-2">{title}</h4>
-    <p class="text-sm sm:text-base md:text-lg text-left mb-3">
+    <h4
+      class="overflow-hidden text-ellipsis whitespace-nowrap text-lg sm:text-xl md:text-[22px] font-medium mb-2 text-[#333333]"
+    >
+      {title}
+    </h4>
+    <p
+      class="text-[11px] sm:text-base md:text-lg text-left text-[#494949] mb-3"
+    >
       {desc}
     </p>
     <a

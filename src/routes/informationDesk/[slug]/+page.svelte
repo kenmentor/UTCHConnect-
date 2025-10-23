@@ -188,7 +188,11 @@
       </p>
 
       <div>
-        <InformationDesk title="Related Articles" data={mockRelatedArticle} />
+        <InformationDesk
+          row={2}
+          title="Related Articles"
+          data={mockRelatedArticle}
+        />
       </div>
     </div>
   </div>

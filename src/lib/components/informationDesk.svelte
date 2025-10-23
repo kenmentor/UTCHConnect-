@@ -11,6 +11,7 @@
   export let isReadmore = false;
   export let title: string = "Information Desk";
   export let desc: string = "";
+  export let row = 3;
 
   export let data: Data[];
 </script>
@@ -35,7 +36,7 @@
 
   <!-- Responsive grid: 1 col on small, 2 cols on medium, 3 cols on lg+ -->
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl px-4"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-{row} gap-6 w-full max-w-7xl px-4"
   >
     {#each data as item}
       <Information

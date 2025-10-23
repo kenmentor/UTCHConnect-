@@ -7,7 +7,7 @@
 <section
   class="relative flex flex-col-reverse items-center justify-center
          text-center gap-8 sm:gap-10 lg:gap-16
-         min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] lg:min-h-[80vh]
+         min-h-[60vh] sm:min-h-[65vh] md:min-h-[15vh] lg:min-h-[20vh]
          pt-[120px] sm:pt-[140px] md:pt-[160px] lg:pt-[180px]
          px-4 sm:px-8 md:px-12 lg:px-20 xl:px-[140px]
          bg-cover bg-center transition-all duration-500 ease-out"
@@ -21,14 +21,14 @@
   <!-- Content -->
   <div class="relative z-10 flex flex-col items-center justify-center w-full">
     <h1
-      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl leading-tight text-gray-900"
+      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900"
     >
       <slot />
     </h1>
 
     <p
-      class="mt-4 sm:mt-6 max-w-[600px] text-center font-medium
-              text-[#00000099] text-base sm:text-lg md:text-xl lg:text-2xl"
+      class="mt-4 sm:mt-6 text-center font-medium
+              text-[#00000099] text-base sm:text-lg md:text-xl lg:text-2xl w-full max-w-[717px]"
     >
       {subtitle}
     </p>

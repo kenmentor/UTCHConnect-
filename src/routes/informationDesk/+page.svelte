@@ -11,6 +11,7 @@
   import { Button } from "carbon-components-svelte";
   import info from "$lib/assets/info.png";
   import { Heading } from "carbon-icons-svelte";
+  import BackdropHero from "$lib/components/BackdropHero.svelte";
 
   const data = [
     {
@@ -81,22 +82,16 @@
 
 <Header pageId={4} />
 
-<Hero
-  subtitle="Your central hub for all hospital news, updates, policy changes, and important announcements at the University of Calabar Teaching Hospital."
+<BackdropHero
+  subtitle="Stay informed with the latest developments, policy changes, and important announcements from UCTH"
 >
-  <h1
-    class="w-full max-w-2xl text-[32px] sm:text-[48px] md:text-[64px] leading-tight font-semibold"
-  >
-    UCTH <span class="text-blue-600"> Information</span>
-    <span> Desk </span>
-  </h1>
-</Hero>
-
+  <h1 class="text-[48px] font-semibold">Latest News & Updates</h1>
+</BackdropHero>
 <main
   class="cds-custom-theme relative flex min-h-screen flex-col gap-3.5
-         px-4 sm:px-8 md:px-12 lg:px-20 xl:px-[140px] pb-12 pt-12"
+         px-4 sm:px-8 md:px-12 lg:px-20 xl:px-[140px] pb-12"
 >
-  <InformationDesk {data} />
+  <InformationDesk {data} row={2} />
 
   <section
     class="flex items-center justify-center mb-16 sm:mb-24 md:mb-[162px]
