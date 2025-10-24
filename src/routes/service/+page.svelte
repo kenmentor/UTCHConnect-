@@ -11,7 +11,7 @@
   subtitle="Comprehensive digital identity and authentication services designed to enhance security, accountability, and service delivery at UCTH"
 >
   <h1
-    class=" lg:text-left w-full text-[50px] max-w-2xl text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center px-4"
+    class=" lg:text-left w-full text-[50px] max-w-2xl text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold md:text-[50px] text-center px-4"
   >
     Our <span class="text-blue-600">Services</span>
   </h1>

@@ -5,6 +5,9 @@
   import logo from "$lib/assets/logo.png";
   import backgroundimage from "$lib/assets/backgroundimage.jpg";
   import { ArrowRight } from "carbon-icons-svelte";
+  import { fade } from "svelte/transition";
+  import { writable } from "svelte/store";
+  // const animate = writable(false);
 </script>
 
 <section
@@ -21,9 +24,14 @@
   <div
     class="z-10 flex flex-col gap-6 sm:gap-8 lg:gap-10 flex-1 text-center lg:text-left"
   >
-    <span class="text-left">
+    <!-- {#if $animate} -->
+    <span class="text-left" transition:fade>
       <slot />
     </span>
+    <!-- {/if} -->
+    <!-- {$animate} -->
+    <!-- <button>hello</button>
+    <button on:click={ani}>hello</button> -->
     <p
       class="text-[22px] lg:text-left font-light md:text-lg lg:text-[22px] sm:text-left"
     >
