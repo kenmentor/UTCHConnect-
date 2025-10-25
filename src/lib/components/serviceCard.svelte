@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
   // filepath: serviceCard.svelte
   export interface ServiceCardProps {
-    icon?: string;
+    Icon?: ConstructorOfATypedSvelteComponent;
     color?: string;
     title: string;
     desc?: string;
@@ -14,7 +14,7 @@
 
 <script lang="ts">
   import { Button } from "carbon-components-svelte";
-  import { User } from "lucide-svelte";
+  import type { Component } from "lucide-svelte";
 
   // Predefined color palette
   const palette = [
@@ -35,12 +35,12 @@
 </script>
 
 <div
-  class="px-[34px] py-[46px] m-3.5 flex flex-col gap-[24px] outline shadow min-h-[480px] flex-1 w-full max-w-[567px]"
+  class="px-[34px] py-[46px] m-3.5 flex flex-col gap-[24px] outline md:h-[600px] shadow flex-1 w-full max-w-[567px]"
   style={`outline-color: ${color};`}
 >
   <!-- Header -->
   <div class="flex gap-3 items-center">
-    {#if data.icon}
+    {#if data.Icon}
       <div
         class="p-2 size-[54px] flex items-center justify-center"
         style={`background-color: ${color};`}
@@ -50,16 +50,20 @@
           alt={data.title}
           class="max-h-full max-w-full object-contain"
         /> -->
-        <User size={25} color={"white"} />
+        <data.Icon size={25} color={"white"} />
       </div>
     {/if}
     <div>
-      <h2 class=" text-left font-medium text-[28px] text-[#333333] text-lg">
+      <h2
+        class=" text-left font-medium text-[28px] text-[#333333] text-lg lg:text-[30px]"
+      >
         {data.title}
       </h2>
     </div>
   </div>
-  <p class="text-[#333333] text-[22px] text-left">{data.desc}</p>
+  <p class="text-[#333333] text-[22px] text-left">
+    {data.desc}
+  </p>
 
   <!-- Features -->
   <div>
