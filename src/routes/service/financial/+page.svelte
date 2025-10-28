@@ -4,23 +4,34 @@
   import ServiceCard, {
     type ServiceCardProps,
   } from "$lib/components/serviceCard.svelte";
-
+  import doctor from "$lib/assets/doctor.png";
   import Footer from "$lib/components/Footer.svelte";
   import { Wallet } from "lucide-svelte";
 
   const services: ServiceCardProps[] = [
     {
-      Icon: Wallet,
-      title: "Financial Services",
-      desc: "Manage your payments and salary efficiently with our secure PayIQue System.",
-
+      Icon: doctor,
+      title: "PayIQue System",
+      desc: "Complete payment and salary management platform for UCTH staff and personnel.",
       link: "#",
       features: {
-        name: "PayIQue System:",
-        list: ["Salary Tracking", "Payslips", "Payment Management"],
+        name: "Features:",
+        list: ["Salary Tracking", "Digital Payslips", "Transaction History"],
       },
       buttonText: "Access PayIQue",
-      color: "#1E88E5", // A professional blue shade for finance
+      color: "#0050E6",
+    },
+    {
+      Icon: doctor,
+      title: "ID Card Payment",
+      desc: "Secure and convenient payment portal for UCTH identification card services.",
+      link: "https://portal.yrka.app/ucth/card/v1",
+      features: {
+        name: "Features:",
+        list: ["New ID Card Payment ", "Card Renewal", "Replacement Cards"],
+      },
+      buttonText: "Make Payment",
+      color: "#7D4533",
     },
   ];
 </script>
@@ -31,7 +42,7 @@
     subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
   >
     <h1
-      class="w-full text-[58px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-[50px"
+      class="w-full text-[50px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-[50px]"
     >
       Financial <span class="text-blue-600"> Services</span>
     </h1>

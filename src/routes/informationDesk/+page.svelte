@@ -85,10 +85,13 @@
 <BackdropHero
   subtitle="Stay informed with the latest developments, policy changes, and important announcements from UCTH"
 >
-  <h1 class="text-[48px] font-semibold">Latest News & Updates</h1>
+  <h1 class="text-[42px] md:text-[48px] font-semibold">
+    Latest News <span class="text-[#0050E6]">& Updates</span>
+  </h1>
 </BackdropHero>
+
 <main
-  class="cds-custom-theme relative flex min-h-screen flex-col gap-3.5
+  class="  cds-custom-theme relative flex min-h-screen flex-col gap-3.5
          px-4 sm:px-8 md:px-12 lg:px-20 xl:px-[140px] pb-12"
 >
   <InformationDesk {data} row={2} />
@@ -104,10 +107,6 @@
 <Footer />
 
 <style>
-  main {
-    padding-bottom: 48px;
-    padding-top: 48px;
-  }
   section {
     padding-left: 140px;
     padding-right: 140px;

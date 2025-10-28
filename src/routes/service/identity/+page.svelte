@@ -8,12 +8,13 @@
   import info from "$lib/assets/avater.png";
   import Footer from "$lib/components/Footer.svelte";
   import { User } from "lucide-svelte";
+  import doctor from "$lib/assets/doctor.png";
   const services: ServiceCardProps[] = [
     {
-      Icon: User,
+      Icon: doctor,
       title: "Create Staff Account",
       desc: "Register for a new UCTH digital identity through our WhatsApp bot. Quick, secure, and automated account creation.",
-      link: "https://portal.yrka.app/ucth/card/v1",
+      link: "#",
       features: {
         name: "What You'll Get:",
         list: [
@@ -22,24 +23,24 @@
           "Transaction History",
         ],
       },
-      buttonText: "Create Via Whatsapp",
-      color: "#2563eb",
+      buttonText: "Access PayIQue",
+      color: "#0050E6",
     },
     {
-      link: "https://portal.yrka.app/ucth/card/v1",
-      Icon: User,
-      title: "Update Account",
-      desc: "Easily update your staff information or renew your details in just a few steps.",
+      link: "#",
+      Icon: doctor,
+      title: "Modify Account",
+      desc: "Update your existing UCTH digital identity information quickly and securely through WhatsApp.",
       features: {
-        name: "Features:",
+        name: "Modification Options:",
         list: [
-          "Fast-track renewal",
-          "Biometric update optional",
-          "Secure data verification",
+          "Update Personal Information",
+          "Change Contact Details",
+          "Update Department Info",
         ],
       },
-      buttonText: "Update Account",
-      color: "#16a34a",
+      buttonText: "Modify Via Whatsapp",
+      color: "#BA0EA6",
     },
   ];
 </script>
@@ -50,7 +51,7 @@
     subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
   >
     <h1
-      class="w-full text-[58px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-[50px]"
+      class="w-full text-[50px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-[50px]"
     >
       Identity <span class="text-blue-600"> Services</span>
     </h1>

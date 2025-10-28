@@ -3,6 +3,7 @@
   export let desc: string;
   export let id: string = "/";
   export let thumbnail: string;
+
   // new date prop with default
   export let date: string | Date = new Date();
 

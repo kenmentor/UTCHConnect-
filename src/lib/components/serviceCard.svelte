@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
   // filepath: serviceCard.svelte
   export interface ServiceCardProps {
-    Icon?: ConstructorOfATypedSvelteComponent;
+    Icon?: string;
     color?: string;
     title: string;
     desc?: string;
@@ -14,7 +14,7 @@
 
 <script lang="ts">
   import { Button } from "carbon-components-svelte";
-  import type { Component } from "lucide-svelte";
+  import { icons, type Component } from "lucide-svelte";
 
   // Predefined color palette
   const palette = [
@@ -50,7 +50,7 @@
           alt={data.title}
           class="max-h-full max-w-full object-contain"
         /> -->
-        <data.Icon size={25} color={"white"} />
+        <img class=" size-[25px]" src={data?.Icon} alt={data.title} />
       </div>
     {/if}
     <div>
