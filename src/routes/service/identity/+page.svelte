@@ -46,24 +46,25 @@
 </script>
 
 <Header />
-<main>
+<main class="pb-[140px]">
   <BackdropHero
-    subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
+    subtitle="Digital identity and access management for UCTH personnel. Create and modify your account through our automated WhatsApp assistant for seamless identity verification and personnel management."
   >
     <h1
       class="w-full text-[50px] max-w-2xl text-4xl sm:text-5xl lg:text-6xl font-bold leading-[50px]"
     >
-      Identity <span class="text-blue-600"> Services</span>
+      Identity <span class="text-blue-600">& Services</span>
     </h1>
   </BackdropHero>
   <div
-    class="flex p-5 items-center md:flex-row flex-col w-full md:gap-[20px] lg:gap-[80px] justify-center"
+    class="flex px-[10px] md:px-[50px] lg:px-[150px] items-center md:flex-row flex-col w-screen md:gap-[40px] lg:gap-[80px] justify-center"
   >
     {#each services as service}
       <ServiceCard data={service} />
     {/each}
   </div>
 </main>
+
 <Footer />
 
 <style>

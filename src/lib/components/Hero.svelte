@@ -33,7 +33,7 @@
     <!-- <button>hello</button>
     <button on:click={ani}>hello</button> -->
     <p
-      class="text-[22px] lg:text-left font-light md:text-lg lg:text-[22px] sm:text-left"
+      class="sm:text-[16px] md:text-[22px] lg:text-left font-light md:text-lg lg:text-[22px] sm:text-center"
     >
       {subtitle}
     </p>

@@ -37,7 +37,7 @@
 </script>
 
 <Header />
-<main>
+<main class="pb-[140px]">
   <BackdropHero
     subtitle="Streamlined payment and salary management solutions for UCTH. Access PayIQue for salary tracking and payslips, or make secure ID card payments through our integrated system."
   >
@@ -49,7 +49,7 @@
   </BackdropHero>
 
   <div
-    class="  flex p-5 items-center md:flex-row flex-col w-full md:gap-[20px] lg:gap-[80px] justify-center md:py-[100px]"
+    class="flex px-[15px] md:px-[50px] lg:px-[150px] items-center md:flex-row flex-col w-screen md:gap-[40px] lg:gap-[80px] justify-center"
   >
     {#each services as service}
       <ServiceCard data={service} />

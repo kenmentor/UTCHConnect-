@@ -4,6 +4,7 @@
   import InformationDesk from "$lib/components/informationDesk.svelte";
   import PageLocator from "$lib/components/pageLocator.svelte";
   import info from "$lib/assets/info.png";
+  import { span } from "motion/react-m";
 
   $: data = {
     date: " September 08, 2025",
@@ -48,9 +49,12 @@
 <main class="p-3 pt-24">
   <!-- Responsive container padding -->
   <div class="px-4 sm:px-10 lg:px-[160px] flex flex-col gap-[20px]">
-    <PageLocator />
-
     <!-- Info tags -->
+    <div>
+      <a> Home </a> {">"}
+      <a> Info Desk </a> {">"}
+      <span>{data.title}</span>
+    </div>
     <div class="flex flex-wrap gap-3">
       <span
         class="px-5 py-[15px] text-white bg-blue-600 text-[20px] font-semibold"

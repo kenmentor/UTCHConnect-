@@ -1,20 +1,36 @@
 <script lang="ts">
   import { Button } from "carbon-components-svelte";
-  import { Menu, Close } from "carbon-icons-svelte";
+  import { Menu, Close, ServiceDesk } from "carbon-icons-svelte";
   // import YOUreka from "$lib/assets/YOUREKA.png";
   import not from "$lib/assets/avater.png";
+  import logo from "$lib/assets/logo.png";
+  import {
+    Home,
+    HomeIcon,
+    Box,
+    Bell,
+    LogOut,
+    LucideLayoutDashboard,
+  } from "lucide-svelte";
   import YOUreka from "$lib/assets/YOUreka.png";
-  export let authorized: boolean = false;
+
+  export let authorized: boolean = true;
   export let pageId: number = 1;
 
   let mobileMenuOpen: boolean = false;
   // const YOUreka = "https://your-logo-url.com/YOUREKA.png"; // Replace with actual logo URL
   // Navigation links
   let navigation = [
-    { link: "/", name: "Home", id: 1 },
-    { link: "/service", name: "Service", id: 2 },
-    { link: "/about-us", name: "About Us", id: 3 },
-    { link: "/informationDesk", name: "Info Desk", id: 4 },
+    { link: "/", name: "Home", id: 1, icon: HomeIcon },
+    { link: "/iserve", name: "Iserve", id: 2, icon: LucideLayoutDashboard },
+    {
+      link: "/notifications",
+      name: "Notifications",
+      id: 3,
+      icon: Bell,
+      messageCount: 3,
+    },
+    { link: "/informationDesk", name: "Info Desk", id: 4, icon: Box },
   ];
 </script>
 
@@ -86,10 +102,8 @@
     class="lg:hidden p-2 rounded-lg !bg-transparent"
     on:click={() => (mobileMenuOpen = !mobileMenuOpen)}
   >
-    {#if mobileMenuOpen}
-      <Close size={24} />
-    {:else}
-      <Menu size={24} />
+    {#if !mobileMenuOpen}
+      <Menu size={24} class="text-[#0050E6]" />
     {/if}
   </button>
 </header>
@@ -112,65 +126,85 @@
 
   <!-- Sidebar -->
   <aside
-    class="fixed top-0 left-0 w-64 h-full bg-white/95 shadow-xl z-20 p-6 flex flex-col gap-6 border-r border-gray-200 animate-slideIn"
+    class="fixed top-0 left-0 w-64 h-full bg-white/95 shadow-xl z-20 py-[32px] pl-[17px] flex flex-col border-r border-gray-200 animate-slideIn"
   >
     <!-- Header -->
     <div
-      class="flex justify-between items-center mb-6 border-b border-gray-100 pb-4"
+      class="flex justify-between items-center mb-6 border-b border-gray-100"
     >
       <div class="flex items-center gap-2">
-        <img src={YOUreka} alt="YOUreka" class="h-9" />
-        <span class="font-semibold text-[16px] text-[var(--color-primary)]"
-          >YOUreka</span
+        <img src={logo} alt="logo" class="h-9" />
+        <span class="font-semibold text-[15px]"
+          >UCTH <span class="text-[#0050E6] text-[15px]">IDID Serivce</span
+          ></span
         >
       </div>
       <button
         on:click={() => (mobileMenuOpen = false)}
-        class="p-2 rounded-full hover:bg-gray-100 transition-colors"
+        class="p-2 rounded-full hover:bg-gray-100 transition-colors bg-transparent text-[#0050E6]"
       >
         <Close size={24} />
       </button>
     </div>
 
     <!-- Navigation -->
-    <nav class="flex flex-col gap-4 text-[16px] font-medium">
+    <nav class="flex flex-col gap-[12px] text-[16px] font-medium">
       {#each navigation as item}
         <a
           href={item.link}
           class={pageId === item.id
-            ? "text-[var(--color-primary)] font-medium"
-            : "text-[#333333] hover:text-[var(--color-primary)] transition-colors duration-200"}
+            ? "text-[#324054] font-medium hover:bg-[#e0e9f5] p-[12px] flex items-center gap-[10px] "
+            : "text-[#324054] hover:text-[var(--color-primary)] hover:bg-[#e0e9f5] transition-colors duration-200 p-[12px] flex items-center gap-[10px]"}
           on:click={() => (mobileMenuOpen = false)}
         >
+          <svelte:component this={item.icon} color={"#71839B"} />
           {item.name}
+
+          {#if item.messageCount}
+            <span
+              class="bg-[#FF472E] text-[12px] text-white py-[3px] px-[6px] rounded-full"
+            >
+              {item.messageCount}
+            </span>
+          {/if}
         </a>
       {/each}
+      <span
+        class={"text-[#324054] hover:text-[var(--color-primary)] transition-colors duration-200 p-[12px] flex items-center gap-[10px] hover:bg-[#e0e9f5]"}
+        on:click={() => (mobileMenuOpen = false)}
+      >
+        <LogOut color={"#71839B"} /> Logout
+      </span>
     </nav>
 
     <!-- Divider -->
     <div class="border-t border-gray-200 my-6"></div>
 
     <!-- Auth Section -->
-    <div class="mt-auto">
+    <div class="mt-auto pl-[25px]">
       {#if !authorized}
-        <Button
-          href="/login"
-          class="w-full !flex !justify-center !bg-[var(--color-primary)] !text-white"
-        >
-          Login
-        </Button>
-        <Button
-          href="/signup"
-          class="w-full !flex !justify-center mt-3 !bg-gray-100 !text-black hover:!bg-gray-200"
-        >
-          Sign Up
-        </Button>
+        <div class=" pr-[25px]">
+          <Button
+            href="/login"
+            class="w-full !flex !justify-center !bg-[var(--color-primary)] !text-white"
+          >
+            Login
+          </Button>
+          <Button
+            href="/signup"
+            class="w-full !flex !justify-center mt-3 !bg-gray-100 !text-black hover:!bg-gray-200"
+          >
+            Sign Up
+          </Button>
+        </div>
       {:else}
-        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-          <img src={not} alt="" class="w-10 h-10 rounded-full object-cover" />
-          <div>
-            <h2 class="text-[15px] font-semibold">Joy Peace</h2>
-            <h4 class="text-[13px] text-gray-500">Staff Member</h4>
+        <div class="pr-[25px]">
+          <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+            <img src={not} alt="" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <h2 class="text-[15px] font-semibold">Joy Peace</h2>
+              <h4 class="text-[13px] text-gray-500">0912 345 6874</h4>
+            </div>
           </div>
         </div>
       {/if}

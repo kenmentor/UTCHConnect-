@@ -13,9 +13,6 @@
 </script>
 
 <script lang="ts">
-  import { Button } from "carbon-components-svelte";
-  import { icons, type Component } from "lucide-svelte";
-
   // Predefined color palette
   const palette = [
     "#2563eb", // blue-600
@@ -35,7 +32,7 @@
 </script>
 
 <div
-  class="px-[34px] py-[46px] m-3.5 flex flex-col gap-[24px] outline md:h-[600px] shadow flex-1 w-full max-w-[567px]"
+  class=" rounded-[5px] px-[34px] py-[46px] m-3.5 flex flex-col gap-[24px] outline shadow flex-1 md:max-w-[867px]"
   style={`outline-color: ${color};`}
 >
   <!-- Header -->
@@ -90,7 +87,7 @@
   <div>
     <a href={`${data.link}`}>
       <button
-        class=" text-[22px] !w-full !flex !items-center !justify-center font-medium !px-[18px]"
+        class=" text-[22px] !w-full rounded-[5px] !flex !items-center !justify-center font-medium !px-[18px]"
         style={`background-color: ${color};`}
       >
         {buttonText}
