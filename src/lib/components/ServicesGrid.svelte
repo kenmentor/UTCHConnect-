@@ -37,7 +37,7 @@
       icon: Group,
       subtitle: "Features",
       features: ["UCTH Messenger", "Feedback", "iReport", "System"],
-      link: "service/identity",
+      link: "#",
     },
     {
       id: "4",
@@ -52,7 +52,7 @@
         "iScheduler",
         "Staff ID Cards",
       ],
-      link: "service/identity",
+      link: "#",
     },
   ];
 </script>

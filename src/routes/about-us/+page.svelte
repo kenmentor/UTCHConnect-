@@ -110,7 +110,7 @@
   subtitle="Comprehensive digital identity and authentication services designed to enhance security, accountability, and service delivery at UCTH"
 >
   <h1
-    class="w-full max-w-2xl text-3xl sm:text-4xl lg:text-6xl font-bold text-center sm:text-left"
+    class="  w-full lg:max-w-2xl md:text-[42px] sm:text-4xl lg:text-6xl font-bold text-center md:text-center lg:text-left"
   >
     Our <span class="text-blue-600">About Us</span>
   </h1>

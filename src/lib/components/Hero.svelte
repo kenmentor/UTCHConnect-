@@ -4,9 +4,10 @@
 
   import logo from "$lib/assets/logo.png";
   import backgroundimage from "$lib/assets/backgroundimage.jpg";
-  import { ArrowRight } from "carbon-icons-svelte";
+  import { ArrowRight, ChevronLeft } from "carbon-icons-svelte";
   import { fade } from "svelte/transition";
   import { writable } from "svelte/store";
+  import { ChevronRight, ChevronsRight } from "lucide-svelte";
   // const animate = writable(false);
 </script>
 
@@ -39,10 +40,10 @@
     </p>
     <div>
       <button
-        class=" btn mx-auto lg:mx-0 !px-[25px] flex gap-[10px] text-white py-[11px] text-[16px]"
+        class=" btn mx-auto lg:mx-0 !px-[25px] flex gap-[10px] text-white py-[11px] text-[16px] items-center"
         color="red"
       >
-        Get Started <ArrowRight />
+        Get Started <ChevronsRight />
       </button>
     </div>
   </div>

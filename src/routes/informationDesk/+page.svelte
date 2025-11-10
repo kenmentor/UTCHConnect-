@@ -83,6 +83,9 @@
 <Header pageId={4} />
 
 <BackdropHero
+  py="0px"
+  py_m="0px"
+  py_lg="0px"
   subtitle="Stay informed with the latest developments, policy changes, and important announcements from UCTH"
 >
   <h1 class="text-[42px] md:text-[48px] font-semibold">

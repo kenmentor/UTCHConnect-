@@ -2,9 +2,7 @@
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/Header.svelte";
   import InformationDesk from "$lib/components/informationDesk.svelte";
-  import PageLocator from "$lib/components/pageLocator.svelte";
   import info from "$lib/assets/info.png";
-  import { span } from "motion/react-m";
 
   $: data = {
     date: " September 08, 2025",
@@ -51,8 +49,10 @@
   <div class="px-4 sm:px-10 lg:px-[160px] flex flex-col gap-[20px]">
     <!-- Info tags -->
     <div>
-      <a> Home </a> {">"}
-      <a> Info Desk </a> {">"}
+      <a> Home </a>
+      {">"}
+      <a> Info Desk </a>
+      {">"}
       <span>{data.title}</span>
     </div>
     <div class="flex flex-wrap gap-3">

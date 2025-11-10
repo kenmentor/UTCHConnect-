@@ -20,12 +20,26 @@
   let mobileMenuOpen: boolean = false;
   // const YOUreka = "https://your-logo-url.com/YOUREKA.png"; // Replace with actual logo URL
   // Navigation links
-  let navigation = [
+  let sidebarnavigation = [
     { link: "/", name: "Home", id: 1, icon: HomeIcon },
     { link: "/iserve", name: "Iserve", id: 2, icon: LucideLayoutDashboard },
     {
-      link: "/notifications",
+      link: "#",
       name: "Notifications",
+      id: 3,
+      icon: Bell,
+      messageCount: 3,
+    },
+    { link: "/informationDesk", name: "Info Desk", id: 4, icon: Box },
+  ];
+
+  /////
+  let navigation = [
+    { link: "/", name: "Home", id: 1, icon: HomeIcon },
+    { link: "/service", name: "Service", id: 2, icon: LucideLayoutDashboard },
+    {
+      link: "/about-us",
+      name: "About Us",
       id: 3,
       icon: Bell,
       messageCount: 3,
@@ -149,7 +163,7 @@
 
     <!-- Navigation -->
     <nav class="flex flex-col gap-[12px] text-[16px] font-medium">
-      {#each navigation as item}
+      {#each sidebarnavigation as item}
         <a
           href={item.link}
           class={pageId === item.id

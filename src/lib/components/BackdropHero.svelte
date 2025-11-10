@@ -2,6 +2,9 @@
   export let subtitle: string = "Hero Subtitle";
 
   import backgroundimage from "$lib/assets/backgroundimage.jpg";
+  export let py: string = "50px";
+  export let py_m: string = "0px";
+  export let py_lg: string = "150px";
 </script>
 
 <section
@@ -9,8 +12,8 @@
          text-center gap-8 sm:gap-10 lg:gap-16
         ] sm:min-h-[65vh] md:min-h-[15vh] lg:min-h-[20vh]
           sm:pt-[140px] md:pt-[160px] lg:pt-[180px]
-         px-4 sm:px-8 md:px-12 lg:px-20 xl:px-[140px] lg:py-[150px]
-         bg-cover bg-center transition-all duration-500 ease-out pt-[90px] py-[50px]"
+         px-4 sm:px-8 md:px-12 lg:px-20 xl:px-[140px] lg:py-[{py_lg}]
+         bg-cover bg-center transition-all duration-500 ease-out pt-[90px] py-[{py}]"
   style="background-image: url({backgroundimage}); background-position: center;"
 >
   <!-- Overlay -->
