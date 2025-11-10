@@ -36,58 +36,75 @@
     </div>
 
     <!-- Info Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mb-16">
       <!-- Phone -->
       <div
-        class="group bg-white/80 backdrop-blur-md shadow-sm hover:shadow-xl
-        rounded-2xl p-6 flex flex-col items-center text-center border border-blue-50
-        transition-transform duration-300 hover:-translate-y-2"
+        class="
+  flex items-center text-center border border-blue-50 gap-1
+      "
       >
-        <div
-          class="p-4 bg-blue-100 rounded-full text-blue-600 mb-4
+        <div class=" p-1 pt-0 flex items-start">
+          <div
+            class="p-4 bg-blue-100 rounded-full text-blue-600 mb-4
           group-hover:scale-110 transition-transform"
-        >
-          <Phone size={24} />
+          >
+            <Phone size={24} />
+          </div>
         </div>
-        <h2 class="text-lg font-semibold mb-1">Call Us</h2>
-        <p class="text-gray-600 text-sm">+234-801-234-5678</p>
-        <p class="text-gray-600 text-sm">+234-809-876-5432</p>
+        <div class="text-left">
+          <h2 class="text-lg font-semibold mb-1">Call Us</h2>
+          <p class="text-gray-600 text-[21px]">+234-801-234-5678</p>
+          <p class="text-gray-600 text-[21px] text-sm">+234-809-876-5432</p>
+        </div>
       </div>
 
       <!-- Email -->
       <div
-        class="group bg-white/80 backdrop-blur-md shadow-sm hover:shadow-xl
-        rounded-2xl p-6 flex flex-col items-center text-center border border-blue-50
-        transition-transform duration-300 hover:-translate-y-2"
+        class="
+  flex items-center text-center border border-blue-50 gap-1
+      "
       >
-        <div
-          class="p-4 bg-green-100 rounded-full text-green-600 mb-4
+        <div class=" p-1 pt-0 flex items-start">
+          <div
+            class="p-4 bg-green-100 rounded-full text-green-600 mb-4
           group-hover:scale-110 transition-transform"
-        >
-          <Email size={24} />
+          >
+            <Email size={24} />
+          </div>
         </div>
-        <h2 class="text-lg font-semibold mb-1">Email Us</h2>
-        <p class="text-gray-600 text-sm">info@unicalradio.edu.ng</p>
-        <p class="text-gray-600 text-sm">contact@unicalradio.edu.ng</p>
+        <div class="text-left">
+          <h2 class="text-lg font-semibold mb-1">Email Us</h2>
+          <p class="text-gray-600 text-[21px] m-0 text-left">
+            info@unicalradio.edu.ng
+          </p>
+          <p class="text-gray-600 text-[21px] text-sm">
+            contact@unicalradio.edu.ng
+          </p>
+        </div>
       </div>
-
       <!-- Location -->
       <div
-        class="group bg-white/80 backdrop-blur-md shadow-sm hover:shadow-xl
-        rounded-2xl p-6 flex flex-col items-center text-center border border-blue-50
-        transition-transform duration-300 hover:-translate-y-2"
+        class="
+  flex items-center text-center border border-blue-50 gap-1
+      "
       >
-        <div
-          class="p-4 bg-purple-100 rounded-full text-purple-600 mb-4
+        <div class=" p-1 pt-0 flex items-start">
+          <div
+            class="p-4 bg-purple-100 rounded-full text-purple-600 mb-4
           group-hover:scale-110 transition-transform"
-        >
-          <Location size={24} />
+          >
+            <Location size={24} />
+          </div>
         </div>
-        <h2 class="text-lg font-semibold mb-1">Visit Us</h2>
-        <p class="text-gray-600 text-sm">University of Calabar</p>
-        <p class="text-gray-600 text-sm">
-          PMB 1115, Calabar, Cross River State
-        </p>
+        <div class="text-left">
+          <h2 class="text-lg font-semibold mb-1">Visit Us</h2>
+          <p class="text-gray-600 text-[21px] m-0 text-left">
+            University of Calabar
+          </p>
+          <p class="text-gray-600 text-left">
+            PMB 1115, Calabar, Cross River State
+          </p>
+        </div>
       </div>
     </div>
 
