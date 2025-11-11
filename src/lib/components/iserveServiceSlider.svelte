@@ -5,7 +5,7 @@
 
   import icc from "$lib/assets/icc.png";
   import financialService from "$lib/assets/finicialService.png";
-  import ClinIQx from "$lib/assets/ClinIQx.png";
+  import ClinIQx from "$lib/assets/Cliniqx.png";
   import biometricClocking from "$lib/assets/biometricClocking.png";
   import dashnoard from "$lib/assets/dashboard.png";
   export let serviceItems = [
