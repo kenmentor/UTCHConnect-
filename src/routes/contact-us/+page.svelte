@@ -54,7 +54,7 @@
         <div class="text-left">
           <h2 class="text-lg font-semibold mb-1">Call Us</h2>
           <p class="text-gray-600 text-[21px]">+234-801-234-5678</p>
-          <p class="text-gray-600 text-[21px] text-sm">+234-809-876-5432</p>
+          <p class="text-gray-600 text-[21px] text-left">+234-809-876-5432</p>
         </div>
       </div>
 
@@ -77,7 +77,7 @@
           <p class="text-gray-600 text-[21px] m-0 text-left">
             info@unicalradio.edu.ng
           </p>
-          <p class="text-gray-600 text-[21px] text-sm">
+          <p class="text-gray-600 text-[21px] text-left">
             contact@unicalradio.edu.ng
           </p>
         </div>
